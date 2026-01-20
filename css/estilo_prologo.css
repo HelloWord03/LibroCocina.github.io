@@ -23,8 +23,7 @@ main {
 
 .page-container p {
     margin-bottom: 1.2rem;
-    /*Modificado para cumplir con normativas de accesibilidad*/
-    text-align: justify;
+    /*Modificado para cumplir con normativas de accesibilidad*//*text-align: justify;*/
     font-size: 1.05rem;
     line-height: 1.7;
 }
@@ -60,4 +59,5 @@ main {
     .page-container p {
         font-size: 0.80rem;
     }
+
 }
