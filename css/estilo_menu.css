@@ -1,0 +1,134 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+header h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 2.5rem;
+    color: var(--rojo);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--gris_oscuro);
+  padding: 15px 40px;
+  box-shadow: -3px 3px 8px rgba(203, 18, 18, 0.2);
+  font-family: "Raleway", sans-serif;
+}
+
+.nav-logo a {
+  color: var(--blanco);
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.nav-logo a:hover {
+  color: var(--rojo);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-left: 30px;
+  position: relative;
+}
+
+.nav-links li a {
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+/* Subrayado animado */
+.nav-links li a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: var(--rojo);
+  transition: width 0.3s ease;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-links li a:hover {
+  color: var(--rojo);
+}
+
+.nav-links .aqui{
+  background-color: var(--gris_oscuro);
+  border-radius: 5%;
+  padding: 5px;
+}
+
+
+/* Toggle para móviles */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  height: 3px;
+  width: 25px;
+  background: var(--blanco);
+  margin-bottom: 5px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nav-links {
+    position: fixed;
+    top: 65px;
+    right: -100%;
+    width: 250px;
+    height: calc(100% - 65px);
+    background: var(--negro);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    transition: right 0.3s ease-in-out;
+  }
+
+  .nav-links li {
+    margin: 20px 0;
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+}

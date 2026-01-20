@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="author" content="Ariannet Alvarez">
+<meta name="school" content="CIFP Ciudad Jardín">
+<meta name="date" content="2025-11-1">
+<meta name="last-modified" content="2025-11-15">
+<title>Contacto - Encuesta</title>
+<link rel="stylesheet" href="../css/estilo_base.css">
+<link rel="stylesheet" href="../css/estilo_menu.css">
+<link rel="stylesheet" href="../css/formulario.css">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:500,600&display=swap">
+<!-- favicon -->
+	<link rel="shortcut icon" type="image/png" href="../Imagenes/icon.png">
+</head>
+<body>
+
+<header>
+  <h1>Contacto y Encuesta</h1>
+  <nav class="navbar">
+    <div class="nav-logo">
+      <a href="../index.html">HOME</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="prologo.html">Prólogo</a></li>
+      <li><a href="indice.html">Índice</a></li>
+      <li><a href="ligeros.html">Ligeros</a></li>
+      <li><a href="segundos_platos.html">Segundos Platos</a></li>
+      <li><a href="guarniciones.html">Guarniciones</a></li>
+      <li><a href="postres.html">Los Postres</a></li>
+      <li><a href="otros.html">Otros</a></li>
+      <li><a href="formulario.html" class="aqui">Contacto</a></li>
+    </ul>
+    <div class="nav-toggle" id="navToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="form-container">
+    <h2 class="center-align">Encuesta</h2>
+    <form action="#" method="post" enctype="text/plain">
+
+      <fieldset class="form-fieldset">
+        <legend>Datos Personales</legend>
+        <label for="nombre">Nombre*</label>
+        <input type="text" id="nombre" name="nombre" placeholder="--Ingresa tu Nombre--" maxlength="30" required>
+
+        <label for="apellidos">Apellidos*</label>
+        <input type="text" id="apellidos" name="apellidos" placeholder="--Ingresa tus Apellidos--" maxlength="80" required>
+
+        <label for="email">Email*</label>
+        <input type="email" id="email" name="email" placeholder="--Ingresa tu Email--" maxlength="80" required>
+
+        <label for="edad">Edad*</label>
+        <input type="number" id="edad" name="edad" placeholder="--Ingresa tu edad--" required>
+
+        <label for="tlf">Teléfono</label>
+        <input type="tel" id="tlf" name="tlf" placeholder="--Ingresa tu Teléfono--" pattern="[0-9]{9}" maxlength="9">
+
+        <label for="genero">Género*</label>
+        <select id="genero" name="genero" required>
+          <option value="" disabled selected>-- Selecciona una opción --</option>
+          <option value="femenino">Femenino</option>
+          <option value="masculino">Masculino</option>
+          <option value="otro">Otro</option>
+        </select>
+      </fieldset>
+
+      <fieldset class="form-fieldset">
+        <legend>Datos Encuesta</legend>
+
+        <p>¿Cuál es tu ocupación?</p>
+        <label><input type="radio" name="ocup" value="am@_casa" checked> Am@ de casa</label>
+        <label><input type="radio" name="ocup" value="trabajador"> Trabajador@</label>
+        <label><input type="radio" name="ocup" value="estudiante"> Estudiante</label>
+        <label><input type="radio" name="ocup" value="profesional"> Profesional del sector</label>
+        <label><input type="radio" name="ocup" value="ninguna"> Ninguna de las anteriores</label>
+
+        <p>¿Conocías este libro?</p>
+        <label><input type="radio" name="verificado" value="nunca_visto"> Lo conocía pero nunca lo había visto</label>
+        <label><input type="radio" name="verificado" value="si" checked> Sí</label>
+        <label><input type="radio" name="verificado" value="no"> No</label>
+
+        <p>¿Cómo llegaste a nosotros?</p>
+        <label><input type="checkbox" name="direccion" value="tiktok"> TikTok</label>
+        <label><input type="checkbox" name="direccion" value="autor"> Autor</label>
+        <label><input type="checkbox" name="direccion" value="google_buscador"> Google buscador</label>
+
+        <label for="seccion">¿Qué sección te gustó más?</label>
+        <select id="seccion" name="seccion" required>
+          <option value="" disabled selected>-- Selecciona opción aquí --</option>
+          <option value="postres">Postres</option>
+          <option value="segundos">Segundos Platos</option>
+          <option value="ligeros">Ligeros, sopas y cremas</option>
+          <option value="guarniciones">Guarniciones</option>
+          <option value="nada">Ninguna de las anteriores</option>
+        </select>
+
+        <label for="rating">¿Cómo calificarías este libro de 1 a 5?</label>
+        <select id="rating" name="rating" required>
+          <option value="" disabled selected>-- Selecciona calificación aquí --</option>
+          <option value="1">Una estrella</option>
+          <option value="2">Dos estrellas</option>
+          <option value="3">Tres estrellas</option>
+          <option value="4">Cuatro estrellas</option>
+          <option value="5">Cinco estrellas</option>
+        </select>
+
+        <p>¿Nos recomendarías con tus conocidos?</p>
+        <label><input type="radio" name="recomendacion" value="por_supuesto" checked> Sí</label>
+        <label><input type="radio" name="recomendacion" value="talvez"> Tal vez</label>
+        <label><input type="radio" name="recomendacion" value="nunca"> Nunca</label>
+
+        <label for="comentario">Comentario adicional</label>
+        <textarea id="comentario" name="comentario" rows="5" placeholder="Añade un comentario con tu receta favorita..."></textarea>
+
+        <label><input type="checkbox" name="publ" value="publicidad" checked> ¿Quieres recibir más encuestas y publicidad como esta?</label>
+
+      </fieldset>
+
+      <div class="form-buttons">
+        <button type="submit" class="btn">Enviar</button>
+        <button type="reset" class="btn">Restablecer</button>
+      </div>
+
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>By <span>LMTRX</span></p>
+</footer>
+
+<script src="../js/menu.js"></script>
+</body>
+</html>

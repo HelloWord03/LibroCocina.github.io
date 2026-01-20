@@ -1,0 +1,167 @@
+/* 
+   ESTILO GENERAL DE LA PÁGINA
+ */
+
+section {
+    width: 95%;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+.seccion-coccion-azucar{
+    display: grid;
+    justify-content: center;
+}
+
+/* Títulos de sección */
+section h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: var(--negro);
+    letter-spacing: 1px;
+}
+section h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.nota, .nota-tiempo {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* 
+   CONTENEDORES DE TABLAS
+ */
+
+.grupo-tablas-equivalencia,
+.grupo-tablas-temperatura {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+/* Permite desplazamiento horizontal en pantallas pequeñas */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 15px auto;
+    background: var(--blanco);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 20px;
+}
+
+/* 
+         ESTILO DE TABLAS
+ */
+
+caption {
+    background: var(--negro);
+    color: var(--blanco);
+    padding: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1rem;
+}
+
+th {
+    background: var(--rojo);
+    color: var(--blanco);
+    padding: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+td {
+    padding: 12px;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+/* Filas alternadas */
+tbody tr:nth-child(odd) {
+    background: var(--gris);
+}
+tbody tr:nth-child(even) {
+    background: #ffffff;
+}
+
+/* Hover bonito */
+tbody tr:hover {
+    background: var(--gris_oscuro);
+    transition: 0.3s ease;
+}
+
+/* 
+       COLUMNAS CONSEJOS / GLOSARIO
+ */
+
+.seccion-consejos-glosario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.columna-consejos p {
+    margin-bottom: 12px;
+}
+
+.columna-glosario h1 {
+    text-align: center;
+    color: var(--negro);
+}
+
+dl dt {
+    font-size: 1.4rem;
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--rojo);
+}
+
+dl dd {
+    margin-left: 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* 
+    RESPONSIVE
+ */
+
+@media (max-width: 800px) {
+    .seccion-consejos-glosario {
+        grid-template-columns: 1fr;
+    }
+
+    caption {
+        font-size: 0.9rem;
+    }
+
+    th, td {
+        font-size: 0.55rem;
+        padding: 9px;
+    }
+}
+
+@media (max-width: 500px) {
+    section h1 {
+        font-size: 1.6rem;
+    }
+
+    table {
+        font-size: 0.8rem;
+        width: 90vw;
+    }
+    .nota, .nota-tiempo{
+        padding-left: 20px;
+        font-size: 0.80rem;
+    }
+
+}

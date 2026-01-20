@@ -1,0 +1,126 @@
+:root {
+    --negro: #000;
+    --blanco: #fff;
+    --rojo: #c92121;
+    --gris: #f3f3f3;
+    --gris_oscuro :#80808052;
+    --deca : "Lexend Deca", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto; /* Ocupa todo el espacio disponible */
+}
+body {
+    /*Cambios realizados para usuarios dislexicos usando una nueva fuente de escritura*/
+    /*font-family: "Raleway", sans-serif !important;*/
+    font-family: var(--deca) !important;
+    font-optical-sizing: auto;
+    background: var(--gris);
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ---------------- HEADER ---------------- */
+header {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    background: var(--negro);
+    color: var(--blanco);
+}
+
+header em{color: var(--blanco);}
+
+header h1 {
+    font-family: "Dancing Script", cursive;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+header h1 strong {
+    color: var(--rojo);
+}
+
+header p {
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+/* ---------------- BLOCKQUOTE ---------------- */
+blockquote {
+    margin: 2.5rem auto;
+    padding: 1.5rem;
+    max-width: 800px;
+    background: var(--blanco);
+    border-left: 6px solid var(--rojo);
+    font-style: italic;
+    font-size: 1.1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+blockquote em {
+    color: var(--rojo);
+}
+
+/* ---------------- FOOTER ---------------- */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: var(--negro);
+    color: var(--blanco);
+    margin-top: 2rem;
+    flex-shrink: 0; /* Evita que se encoja */
+}
+
+footer span {
+    color: var(--rojo);
+    font-weight: bold;
+    
+}
+
+.footer-marquee p {
+    white-space: nowrap;
+    padding-left: 100%; /* Empieza fuera de la vista */
+    animation: marquee 10s linear infinite;
+}
+.skip-link {
+    position: absolute;
+    top: -100px;     /* fuera de la pantalla */
+    left: 10px;
+    background: #000;
+    color: #fff;
+    padding: 8px 12px;
+    z-index: 9999;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    top: 10px;       /* aparece SOLO con TAB */
+}
+
+
+/* Animación del texto */
+@keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+}
+
+
+/* ---------------- RESPONSIVE ---------------- */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem;
+    }
+}
