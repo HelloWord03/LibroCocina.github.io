@@ -82,6 +82,7 @@ footer {
     color: var(--blanco);
     margin-top: 2rem;
     flex-shrink: 0; /* Evita que se encoja */
+    font-size: 1.5rem;      /*Para que haga contraste*/
 }
 
 footer span {
@@ -124,3 +125,4 @@ footer span {
         font-size: 2rem;
     }
 }
+
