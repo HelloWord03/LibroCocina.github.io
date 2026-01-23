@@ -13,7 +13,7 @@ section {
 }
 
 /* Títulos de sección */
-section h1 {
+section h2 {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 25px;
@@ -165,3 +165,4 @@ dl dd {
     }
 
 }
+
