@@ -131,6 +131,10 @@ dl dd {
     line-height: 1.5;
 }
 
+.contenedor-nota{
+    display: flex;
+    justify-content: center;
+}
 /* 
     RESPONSIVE
  */
