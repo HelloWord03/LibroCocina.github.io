@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('../fuentes/Lexend_Deca/LexendDeca-VariableFont_wght.ttf') format('truetype');
+}
+
+
 :root {
     --negro: #000;
     --blanco: #fff;
