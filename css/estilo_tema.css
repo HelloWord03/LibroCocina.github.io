@@ -1,0 +1,366 @@
+/* ============================================
+   SELECTOR DE TEMA - ESTILOS
+   ============================================ */
+
+/* Contenedor del selector de tema */
+.theme-selector {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    background: var(--blanco);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: flex;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.theme-selector:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Botones de tema */
+.theme-btn {
+    width: 45px;
+    height: 45px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-btn:hover {
+    transform: scale(1.1);
+    border-color: var(--rojo);
+}
+
+.theme-btn:focus {
+    outline: 3px solid var(--rojo);
+    outline-offset: 3px;
+}
+
+.theme-btn.active {
+    border-color: var(--rojo);
+    box-shadow: 0 0 0 4px rgba(201, 33, 33, 0.2);
+}
+
+/* Efecto de click */
+.theme-btn:active {
+    transform: scale(0.95);
+}
+
+/* Temas específicos */
+.theme-default {
+    background: linear-gradient(135deg, var(--gris) 50%, var(--negro) 50%);
+}
+
+.theme-dark {
+    background: linear-gradient(135deg, #1a1a1a 50%, #f0f0f0 50%);
+}
+
+.theme-sepia {
+    background: linear-gradient(135deg, #f4ecd8 50%, #5c4a2f 50%);
+}
+
+.theme-high-contrast {
+    background: linear-gradient(135deg, #ffffff 50%, #000000 50%);
+}
+
+.theme-blue {
+    background: linear-gradient(135deg, #e3f2fd 50%, #0d47a1 50%);
+}
+
+/* Tooltip */
+.theme-btn::after {
+    content: attr(aria-label);
+    position: absolute;
+    bottom: -35px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    background: var(--negro);
+    color: var(--blanco);
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: transform 0.2s ease;
+    opacity: 0;
+}
+
+.theme-btn:hover::after {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+}
+
+/* ============================================
+   TEMAS - Variables CSS
+   ============================================ */
+
+/* Tema por defecto (ya está en estilo_base.css) */
+:root {
+    --fondo: #f3f3f3;
+    --texto: #222;
+    --header-bg: #000;
+    --header-text: #fff;
+    --card-bg: #fff;
+    --acento: #c92121;
+    --gris-oscuro: #80808052;
+}
+
+/* Tema oscuro */
+body[data-theme="dark"] {
+    --fondo: #1a1a1a;
+    --texto: #f0f0f0;
+    --header-bg: #0a0a0a;
+    --header-text: #ffffff;
+    --card-bg: #2d2d2d;
+    --blanco: #2d2d2d;
+    --negro: #0a0a0a;
+    --gris: #1a1a1a;
+    --gris-oscuro: #666666;
+}
+
+/* Tema sepia */
+body[data-theme="sepia"] {
+    --fondo: #f4ecd8;
+    --texto: #5c4a2f;
+    --header-bg: #5c4a2f;
+    --header-text: #f4ecd8;
+    --card-bg: #fdf8ec;
+    --blanco: #fdf8ec;
+    --negro: #5c4a2f;
+    --gris: #f4ecd8;
+    --gris-oscuro: #8b7355;
+}
+
+/* Tema alto contraste */
+body[data-theme="high-contrast"] {
+    --fondo: #ffffff;
+    --texto: #000000;
+    --header-bg: #000000;
+    --header-text: #ffffff;
+    --card-bg: #ffffff;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --gris: #ffffff;
+    --acento: #ff0000;
+    --gris-oscuro: #666666;
+}
+
+body[data-theme="high-contrast"] * {
+    border-color: #000000 !important;
+}
+
+/* Tema azul */
+body[data-theme="blue"] {
+    --fondo: #e3f2fd;
+    --texto: #0d47a1;
+    --header-bg: #0d47a1;
+    --header-text: #ffffff;
+    --card-bg: #ffffff;
+    --blanco: #ffffff;
+    --negro: #0d47a1;
+    --gris: #e3f2fd;
+    --acento: #1976d2;
+    --gris-oscuro: #64b5f6;
+}
+
+/* Aplicar variables a los elementos */
+body {
+    background-color: var(--fondo) !important;
+    color: var(--texto) !important;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+    background-color: var(--header-bg) !important;
+    color: var(--header-text) !important;
+}
+
+header h1,
+header h1 em,
+header p {
+    color: var(--header-text) !important;
+}
+
+header h1 strong {
+    color: var(--acento) !important;
+}
+
+/* NAVEGACIÓN - Enlaces del menú */
+.navbar a,
+.nav-links a,
+.nav-logo a {
+    color: var(--header-text) !important;
+}
+
+.navbar a:hover,
+.nav-links a:hover {
+    color: var(--acento) !important;
+}
+
+/* Clase "aqui" para página actual */
+.nav-links a.aqui {
+    color: var(--acento) !important;
+    border-bottom-color: var(--acento) !important;
+}
+
+/* Hamburguesa en móvil */
+.nav-toggle span {
+    background-color: var(--header-text) !important;
+}
+
+blockquote,
+.carrusel-item,
+.slideout,
+.form-container,
+.page-container,
+article,
+section {
+    background-color: var(--card-bg) !important;
+    color: var(--texto) !important;
+}
+
+/* Asegurar que todos los textos del main usen el color correcto */
+main,
+main * {
+    color: var(--texto) !important;
+}
+
+/* Links en el contenido */
+main a:not(.nav-links a):not(.navbar a) {
+    color: var(--acento) !important;
+}
+
+/* Botones */
+button,
+.btn,
+.abrir-slide,
+.cerrar-slide {
+    background-color: var(--acento) !important;
+    color: var(--blanco) !important;
+    border-color: var(--acento) !important;
+}
+
+button:hover,
+.btn:hover,
+.abrir-slide:hover,
+.cerrar-slide:hover {
+    background-color: var(--texto) !important;
+    color: var(--card-bg) !important;
+}
+
+/* Tablas */
+table,
+thead,
+tbody,
+th,
+td {
+    color: var(--texto) !important;
+    border-color: var(--texto) !important;
+}
+
+thead {
+    background-color: var(--header-bg) !important;
+    color: var(--header-text) !important;
+}
+
+thead th {
+    color: var(--header-text) !important;
+}
+
+/* Inputs y formularios */
+input,
+textarea,
+select {
+    background-color: var(--card-bg) !important;
+    color: var(--texto) !important;
+    border-color: var(--texto) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--gris-oscuro) !important;
+    opacity: 0.7;
+}
+
+/* Footer */
+footer {
+    background-color: var(--header-bg) !important;
+    color: var(--header-text) !important;
+}
+
+footer .red {
+    color: var(--acento) !important;
+}
+
+/* Slideout (menú lateral de recetas) */
+.sidenav {
+    background-color: var(--card-bg) !important;
+}
+
+.sidenav li,
+.sidenav a,
+.sidenav p {
+    color: var(--texto) !important;
+}
+
+.subheader {
+    color: var(--acento) !important;
+    font-weight: bold;
+}
+
+/* Carrusel */
+.carrusel-item h2,
+.carrusel-item p {
+    color: var(--texto) !important;
+}
+
+.carrusel-prev,
+.carrusel-next {
+    background-color: var(--acento) !important;
+    color: var(--blanco) !important;
+}
+
+/* Overlay oscuro */
+.slideout-overlay {
+    background-color: rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .theme-selector {
+        top: 10px;
+        right: 10px;
+        padding: 8px;
+        gap: 6px;
+    }
+    
+    .theme-btn {
+        width: 38px;
+        height: 38px;
+        border-width: 2px;
+    }
+    
+    .theme-btn::after {
+        display: none; /* Ocultar tooltips en móvil */
+    }
+}
+
+@media (max-width: 480px) {
+    .theme-selector {
+        flex-direction: column;
+        padding: 6px;
+        gap: 5px;
+    }
+    
+    .theme-btn {
+        width: 35px;
+        height: 35px;
+    }
+}

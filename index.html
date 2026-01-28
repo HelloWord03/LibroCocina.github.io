@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:500,600&display=swap">
     <link rel="stylesheet" href="css/estilo_base.css">
     <link rel="stylesheet" href="css/estilo_menu.css">
+    <link rel="stylesheet" href="css/estilo_tema.css">
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="Imagenes/icon.png">
 </head>
@@ -49,6 +50,48 @@
             </div>
         </nav>
     </header>
+    <!-- SELECTOR DE TEMA -->
+<div class="theme-selector" role="group" aria-label="Selector de tema de colores">
+    <button 
+        class="theme-btn theme-default active" 
+        data-theme="default"
+        aria-label="Tema predeterminado"
+        aria-pressed="true"
+        title="Tema predeterminado - Gris claro y negro">
+    </button>
+    
+    <button 
+        class="theme-btn theme-dark" 
+        data-theme="dark"
+        aria-label="Tema oscuro"
+        aria-pressed="false"
+        title="Tema oscuro - Fondo negro y texto claro">
+    </button>
+    
+    <button 
+        class="theme-btn theme-sepia" 
+        data-theme="sepia"
+        aria-label="Tema sepia"
+        aria-pressed="false"
+        title="Tema sepia - Tono cálido para reducir fatiga visual">
+    </button>
+    
+    <button 
+        class="theme-btn theme-high-contrast" 
+        data-theme="high-contrast"
+        aria-label="Tema alto contraste"
+        aria-pressed="false"
+        title="Tema de alto contraste - Blanco y negro para mejor legibilidad">
+    </button>
+    
+    <button 
+        class="theme-btn theme-blue" 
+        data-theme="blue"
+        aria-label="Tema azul"
+        aria-pressed="false"
+        title="Tema azul - Tonos azules relajantes">
+    </button>
+</div>
     <main aria-label="Contenido principal">
         <blockquote role="doc-epigraph" aria-label="Cita sobre el arte de la cocina">
             ❝ <em>de cocina solo pueden hablar los que en ella son artistas
@@ -63,6 +106,7 @@
         </div>
     </footer>
     <script src="js/menu.js"></script>
+    <script src="js/tema.js"></script>
 </body>
 
 </html>
