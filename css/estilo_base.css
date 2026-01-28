@@ -96,7 +96,7 @@ footer span .red{
     
 }
 
-.footer-marquee :first-child {
+.footer-marquee p {
     white-space: nowrap;
     padding-left: 100%; /* Empieza fuera de la vista */
     animation: marquee 10s linear infinite;
