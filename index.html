@@ -15,52 +15,53 @@
     <link rel="stylesheet" href="css/estilo_base.css">
     <link rel="stylesheet" href="css/estilo_menu.css">
     <!-- favicon -->
-	<link rel="shortcut icon" type="image/png" href="Imagenes/icon.png">
+    <link rel="shortcut icon" type="image/png" href="Imagenes/icon.png">
 </head>
 
 <body>
-
     <header>
         <a href="http://selviediciones.com/productos/la-magia-de-un-cocinero-cubano/" target="_blank"
-            style="text-decoration:none; color:white;">
+            style="text-decoration:none; color:white;"
+            aria-label="Enlace al libro La Magia de un Cocinero Cubano en Selviediciones">
             <h1><strong>LA MAGIA</strong> <em>de un cocinero cubano</em></h1>
         </a>
-        <p>CHEF LIUYEN ALVAREZ GALLEGO</p>
-        <nav class="navbar">
+        <p role="doc-subtitle">CHEF LIUYEN ALVAREZ GALLEGO</p>
+        <nav class="navbar" aria-label="Menú principal de navegación">
             <div class="nav-logo">
-                <a href="index.html">HOME</a>
+                <a href="index.html" aria-current="page" aria-label="Página de inicio">HOME</a>
             </div>
-            <ul class="nav-links">
-                <li><a href="page/prologo.html">Prólogo</a></li>
-                <li><a href="page/indice.html">Indice</a></li>
-                <li><a href="page/ligeros.html">Ligeros</a></li>
-                <li><a href="page/segundos_platos.html">Segundos Platos</a></li>
-                <li><a href="page/guarniciones.html">Guarniciones</a></li>
-                <li><a href="page/postres.html">Los Postres</a></li>
-                <li><a href="page/otros.html">Otros</a></li>
-                <li><a href="page/formulario.html">Contacto</a></li>
+            <ul class="nav-links" role="menubar">
+                <li role="none"><a href="page/prologo.html" role="menuitem">Prólogo</a></li>
+                <li role="none"><a href="page/indice.html" role="menuitem">Indice</a></li>
+                <li role="none"><a href="page/ligeros.html" role="menuitem">Ligeros</a></li>
+                <li role="none"><a href="page/segundos_platos.html" role="menuitem">Segundos Platos</a></li>
+                <li role="none"><a href="page/guarniciones.html" role="menuitem">Guarniciones</a></li>
+                <li role="none"><a href="page/postres.html" role="menuitem">Los Postres</a></li>
+                <li role="none"><a href="page/otros.html" role="menuitem">Otros</a></li>
+                <li role="none"><a href="page/formulario.html" role="menuitem">Contacto</a></li>
             </ul>
             <!--Contenedor hamburguesa-->
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-toggle" id="navToggle" role="button" aria-label="Abrir menú de navegación"
+                aria-expanded="false" aria-controls="navToggle" tabindex="0">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
             </div>
         </nav>
     </header>
-    <main>
-        <blockquote>
+    <main aria-label="Contenido principal">
+        <blockquote role="doc-epigraph" aria-label="Cita sobre el arte de la cocina">
             ❝ <em>de cocina solo pueden hablar los que en ella son artistas
                 y aquellos pobres mortales que la aman y consideran como uno de los placeres
                 más puros del espíritu</em> ❞
         </blockquote>
     </main>
 
-     <footer>
-    <div class="footer-marquee">
-        <span>By <span class="red">LMTRX</span></span>
-    </div>
-</footer>
+    <footer>
+        <div class="footer-marquee">
+            <span>By <span class="red">LMTRX</span></span>
+        </div>
+    </footer>
     <script src="js/menu.js"></script>
 </body>
 
