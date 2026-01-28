@@ -26,7 +26,6 @@ body {
     /*Cambios realizados para usuarios dislexicos usando una nueva fuente de escritura*/
     /*font-family: "Raleway", sans-serif !important;*/
     font-family: var(--deca) !important;
-    font-optical-sizing: auto;
     background: var(--gris);
     color: #222;
     line-height: 1.6;
