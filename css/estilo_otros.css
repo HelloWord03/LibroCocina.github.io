@@ -132,7 +132,7 @@ dl dd {
 }
 
 .contenedor-nota{
-    display: flex;
+    display: grid;
     justify-content: center;
 }
 /* 
@@ -169,4 +169,5 @@ dl dd {
     }
 
 }
+
 
