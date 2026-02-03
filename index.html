@@ -9,103 +9,145 @@
     <meta name="school" content="CIFP Ciudad Jardín">
     <meta name="date" content="2025-11-1">
     <meta name="last-modified" content="2025-11-15">
-    <!-- Fuentes -->
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:500,600&display=swap">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS Personalizado -->
     <link rel="stylesheet" href="css/estilo_base.css">
-    <link rel="stylesheet" href="css/estilo_menu.css">
-    <link rel="stylesheet" href="css/estilo_tema.css">
+    
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="Imagenes/icon.png">
 </head>
 
-<body>
-    <header>
+<body data-theme="default">
+    
+    <header class="text-center py-5">
         <a href="http://selviediciones.com/productos/la-magia-de-un-cocinero-cubano/" target="_blank"
             style="text-decoration:none; color:white;"
             aria-label="Enlace al libro La Magia de un Cocinero Cubano en Selviediciones">
-            <h1><strong>LA MAGIA</strong> <em>de un cocinero cubano</em></h1>
+            <h1 class="display-4 fw-semibold">
+                <strong>LA MAGIA</strong> <em>de un cocinero cubano</em>
+            </h1>
         </a>
-        <p role="doc-subtitle">CHEF LIUYEN ALVAREZ GALLEGO</p>
-        <nav class="navbar" aria-label="Menú principal de navegación">
-            <div class="nav-logo">
-                <a href="index.html" aria-current="page" aria-label="Página de inicio">HOME</a>
-            </div>
-            <ul class="nav-links" role="menubar">
-                <li role="none"><a href="page/prologo.html" role="menuitem">Prólogo</a></li>
-                <li role="none"><a href="page/indice.html" role="menuitem">Indice</a></li>
-                <li role="none"><a href="page/ligeros.html" role="menuitem">Ligeros</a></li>
-                <li role="none"><a href="page/segundos_platos.html" role="menuitem">Segundos Platos</a></li>
-                <li role="none"><a href="page/guarniciones.html" role="menuitem">Guarniciones</a></li>
-                <li role="none"><a href="page/postres.html" role="menuitem">Los Postres</a></li>
-                <li role="none"><a href="page/otros.html" role="menuitem">Otros</a></li>
-                <li role="none"><a href="page/formulario.html" role="menuitem">Contacto</a></li>
-            </ul>
-            <!--Contenedor hamburguesa-->
-            <div class="nav-toggle" id="navToggle" role="button" aria-label="Abrir menú de navegación"
-                aria-expanded="false" aria-controls="navToggle" tabindex="0">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </div>
-        </nav>
+        <p role="doc-subtitle" class="lead mb-0" style="letter-spacing: 2px;">CHEF LIUYEN ALVAREZ GALLEGO</p>
     </header>
+
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top" aria-label="Menú principal de navegación">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold" href="index.html" aria-current="page" aria-label="Página de inicio" style="letter-spacing: 1px;">HOME</a>
+            
+            <button class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" 
+                    aria-expanded="false" 
+                    aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav" role="menubar">
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="page/prologo.html" role="menuitem">Prólogo</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="page/indice.html" role="menuitem">Indice</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="page/ligeros.html" role="menuitem">Ligeros</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="page/segundos_platos.html" role="menuitem">Segundos Platos</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="page/guarniciones.html" role="menuitem">Guarniciones</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="page/postres.html" role="menuitem">Los Postres</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="page/otros.html" role="menuitem">Otros</a>
+                    </li>
+                    <li class="nav-item" role="none">
+                        <a class="nav-link" href="page/formulario.html" role="menuitem">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <!-- SELECTOR DE TEMA -->
-<div class="theme-selector" role="group" aria-label="Selector de tema de colores">
-    <button 
-        class="theme-btn theme-default active" 
-        data-theme="default"
-        aria-label="Tema predeterminado"
-        aria-pressed="true"
-        title="Tema predeterminado - Gris claro y negro">
-    </button>
-    
-    <button 
-        class="theme-btn theme-dark" 
-        data-theme="dark"
-        aria-label="Tema oscuro"
-        aria-pressed="false"
-        title="Tema oscuro - Fondo negro y texto claro">
-    </button>
-    
-    <button 
-        class="theme-btn theme-sepia" 
-        data-theme="sepia"
-        aria-label="Tema sepia"
-        aria-pressed="false"
-        title="Tema sepia - Tono cálido para reducir fatiga visual">
-    </button>
-    
-    <button 
-        class="theme-btn theme-high-contrast" 
-        data-theme="high-contrast"
-        aria-label="Tema alto contraste"
-        aria-pressed="false"
-        title="Tema de alto contraste - Blanco y negro para mejor legibilidad">
-    </button>
-    
-    <button 
-        class="theme-btn theme-blue" 
-        data-theme="blue"
-        aria-label="Tema azul"
-        aria-pressed="false"
-        title="Tema azul - Tonos azules relajantes">
-    </button>
-</div>
-    <main aria-label="Contenido principal">
-        <blockquote role="doc-epigraph" aria-label="Cita sobre el arte de la cocina">
-            ❝ <em>de cocina solo pueden hablar los que en ella son artistas
-                y aquellos pobres mortales que la aman y consideran como uno de los placeres
-                más puros del espíritu</em> ❞
-        </blockquote>
+    <div class="theme-selector" role="group" aria-label="Selector de tema de colores">
+        <button 
+            class="theme-btn theme-default active" 
+            data-theme="default"
+            aria-label="Tema predeterminado"
+            aria-pressed="true"
+            title="Tema predeterminado - Gris claro y negro">
+        </button>
+        
+        <button 
+            class="theme-btn theme-dark" 
+            data-theme="dark"
+            aria-label="Tema oscuro"
+            aria-pressed="false"
+            title="Tema oscuro - Fondo negro y texto claro">
+        </button>
+        
+        <button 
+            class="theme-btn theme-sepia" 
+            data-theme="sepia"
+            aria-label="Tema sepia"
+            aria-pressed="false"
+            title="Tema sepia - Tono cálido para reducir fatiga visual">
+        </button>
+        
+        <button 
+            class="theme-btn theme-high-contrast" 
+            data-theme="high-contrast"
+            aria-label="Tema alto contraste"
+            aria-pressed="false"
+            title="Tema de alto contraste - Blanco y negro para mejor legibilidad">
+        </button>
+        
+        <button 
+            class="theme-btn theme-blue" 
+            data-theme="blue"
+            aria-label="Tema azul"
+            aria-pressed="false"
+            title="Tema azul - Tonos azules relajantes">
+        </button>
+    </div>
+
+    <main aria-label="Contenido principal" class="flex-grow-1">
+        <div class="container">
+            <blockquote role="doc-epigraph" 
+                        aria-label="Cita sobre el arte de la cocina"
+                        class="blockquote-custom p-4 my-5 mx-auto">
+                <p class="mb-0 fst-italic fs-5">
+                    " <em>de cocina solo pueden hablar los que en ella son artistas
+                    y aquellos pobres mortales que la aman y consideran como uno de los placeres
+                    más puros del espíritu</em> "
+                </p>
+            </blockquote>
+        </div>
     </main>
 
-    <footer>
-        <div class="footer-marquee">
-            <span>By <span class="red">LMTRX</span></span>
+    <footer class="py-4 text-center mt-5">
+        <div class="footer-marquee overflow-hidden">
+            <p class="mb-0">
+                By <span class="red fw-bold">LMTRX</span>
+            </p>
         </div>
     </footer>
-    <script src="js/menu.js"></script>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript Personalizado -->
     <script src="js/tema.js"></script>
 </body>
 

@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MH5MNHQR');</script>
-    <!-- End Google Tag Manager -->
-     <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "v8psqkc0ss");
-    </script>
+<head> 
     <meta charset="UTF-8">
     <meta name="description" content="Índice del libro y contenido">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,295 +9,323 @@
     <meta name="date" content="2025-11-1">
     <meta name="last-modified" content="2025-11-15">
     <title>Índice</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS Personalizado -->
     <link rel="stylesheet" href="../css/estilo_base.css">
     <link rel="stylesheet" href="../css/estilo_indice.css">
-    <link rel="stylesheet" href="../css/estilo_menu.css">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:500,600&display=swap">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barrio&family=Lexend+Deca:wght@100..900&family=Niconne&display=swap" rel="stylesheet">
 
     <!-- favicon -->
-	<link rel="shortcut icon" type="image/png" href="../Imagenes/icon.png">
+    <link rel="shortcut icon" type="image/png" href="../Imagenes/icon.png">
 </head>
 
-<body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MH5MNHQR"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
+<body data-theme="default"> 
     <a href="#capitulos" class="skip-link">Saltar al contenido</a>
-    <header>
-        <h1>Índice</h1>
-        <nav class="navbar">
-            <div class="nav-logo">
-                <a href="../index.html">HOME</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="prologo.html">Prólogo</a></li>
-                <li><a href="indice.html" class="aqui">Índice</a></li>
-                <li><a href="ligeros.html">Ligeros</a></li>
-                <li><a href="segundos_platos.html">Segundos Platos</a></li>
-                <li><a href="guarniciones.html">Guarniciones</a></li>
-                <li><a href="postres.html">Los Postres</a></li>
-                <li><a href="otros.html">Otros</a></li>
-                <li><a href="formulario.html">Contacto</a></li>
-            </ul>
-            <!--Contenedor hamburguesa-->
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+    
+    <header class="text-center py-5">
+        <h1 class="display-4 fw-semibold">Índice</h1>
     </header>
 
-    <main>
-        <div class="page-container">
-            <section id="indice-general">
-                <h2>Índice General</h2>
-                <ol>
-                    <li><a href="#1">Ligeros, sopas y cremas</a></li>
-                    <li><a href="#2">Segundos Platos</a></li>
-                    <li><a href="#3">Guarniciones</a></li>
-                    <li><a href="#4">Los postres</a></li>
-                    <li><a href="#5">Otros</a></li>
-                </ol>
-            </section>
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold" href="../index.html" style="letter-spacing: 1px;">HOME</a>
+            
+            <button class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" 
+                    aria-expanded="false" 
+                    aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="prologo.html">Prólogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active aqui" href="indice.html">Índice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ligeros.html">Ligeros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="segundos_platos.html">Segundos Platos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="guarniciones.html">Guarniciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="postres.html">Los Postres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="otros.html">Otros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-            <!-- CAPÍTULOS -->
-            <section id="capitulos">
-                <h2>Capítulos</h2>
+    <main class="flex-grow-1 py-5">
+        <div class="container">
+            <div class="page-container">
+                <section id="indice-general" class="mb-5">
+                    <h2 class="text-center mb-4">Índice General</h2>
+                    <ol class="fs-5">
+                        <li><a href="#1" class="text-decoration-none">Ligeros, sopas y cremas</a></li>
+                        <li><a href="#2" class="text-decoration-none">Segundos Platos</a></li>
+                        <li><a href="#3" class="text-decoration-none">Guarniciones</a></li>
+                        <li><a href="#4" class="text-decoration-none">Los postres</a></li>
+                        <li><a href="#5" class="text-decoration-none">Otros</a></li>
+                    </ol>
+                </section>
 
-                <!-- Ligeros -->
-                <article id="1">
-                    <h3>Ligeros, sopas y cremas</h3>
-                    <div class="chapter-grid">
-                        <div>
-                            <ol>
-                                <li>Ensalada de langosta con vinagreta de frutas tropicales</li>
-                                <li>Seviche mojito / Seviche rápido cubano</li>
-                                <li>Montadito de carnes frías con huevos</li>
-                                <li>Montaditos tibios de berenjena, tomate, ajo y queso</li>
-                                <li>Ensalada de vegetales, frutas y queso, aderezada con yogur de guajiro y jalea</li>
-                                <li>Crudito de vegetales sobre tostadas de pan</li>
-                                <li>Saltines con paté de hígado y jalea de fresa</li>
-                                <li>Ensalada de conejo con lentejas, vinagreta de hierbas y mostaza</li>
-                                <li>Sopa de tomate con galletas de queso</li>
-                            </ol>
-                        </div>
-                        <div>
-                            <ol>
-                                <li>Sopa refrescante de pepino con granizado de tomate, ajo y albahaca</li>
-                                <li>Rollitos de calabaza con jamón de pierna y piña glaseada</li>
-                                <li>Croquetas de espinaca</li>
-                                <li>Croquetas de carne</li>
-                                <li>Pulpo al pesto afrutado</li>
-                                <li>Caldo de pescador</li>
-                                <li>Ensalada de brócoli con salsa de queso crema y ajo</li>
-                                <li>Empanaditas de cangrejo agridulce</li>
-                                <li>Volován con ensaladilla de atún</li>
-                            </ol>
-                        </div>
-                        <div>
-                            <ol>
-                                <li>Tostón relleno de crema de calabaza con refrito de bacon y ajo</li>
-                                <li>Tartar de aguacate con camarones y naranja</li>
-                                <li>Cazuelita de cobo al ajillo y sofrito de tomate</li>
-                                <li>Ensalada de atún y huevos de codorniz</li>
-                                <li>Supremas de pepino y camarones aliñados con yogurt de guajiro y aroma de comino</li>
-                                <li>Huevo con relleno marinero</li>
-                                <li>Albondiguillas al queso y compota de remolacha</li>
-                                <li>Sopa de verduritas y raviolis</li>
-                                <li>Bolitas con yuca</li>
-                                <li>Deditos de pescado con mayonesa de hierbas</li>
-                            </ol>
-                        </div>
-                    </div>
-                </article>
+                <!-- CAPÍTULOS -->
+                <section id="capitulos">
+                    <h2 class="text-center mb-4">Capítulos</h2>
 
-                <!-- Segundos Platos -->
-                <article id="2">
-                    <h3>Segundos Platos</h3>
-                    <div class="chapter-grid">
-                        <div>
-                            <ol>
-                                <li>Tacos a lo habanero</li>
-                                <li>Casabe con tasajo de cordero</li>
-                                <li>Costillitas de cerdo a lo criollo</li>
-                                <li>Lomo de cerdo a las brasas, pincelado con tamarindo y orégano</li>
-                                <li>Higadillos de conejo a la pimienta</li>
-                                <li>De conejo en miel y mostaza</li>
-                                <li>Rollo de pollo con camarones y reducción de naranja, piña y jengibre</li>
-                                <li>Muslos de pollo asados en cazuela con mapén a lo habanero</li>
-                                <li>Pechuga de pato en confitura de tomate y jengibre</li>
-                            </ol>
+                    <!-- Ligeros -->
+                    <article id="1" class="mb-5">
+                        <h3 class="h4 fw-bold pb-2 border-bottom border-danger border-2 mb-3">Ligeros, sopas y cremas</h3>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <ol>
+                                    <li>Ensalada de langosta con vinagreta de frutas tropicales</li>
+                                    <li>Seviche mojito / Seviche rápido cubano</li>
+                                    <li>Montadito de carnes frías con huevos</li>
+                                    <li>Montaditos tibios de berenjena, tomate, ajo y queso</li>
+                                    <li>Ensalada de vegetales, frutas y queso, aderezada con yogur de guajiro y jalea</li>
+                                    <li>Crudito de vegetales sobre tostadas de pan</li>
+                                    <li>Saltines con paté de hígado y jalea de fresa</li>
+                                    <li>Ensalada de conejo con lentejas, vinagreta de hierbas y mostaza</li>
+                                    <li>Sopa de tomate con galletas de queso</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-4">
+                                <ol start="10">
+                                    <li>Sopa refrescante de pepino con granizado de tomate, ajo y albahaca</li>
+                                    <li>Rollitos de calabaza con jamón de pierna y piña glaseada</li>
+                                    <li>Croquetas de espinaca</li>
+                                    <li>Croquetas de carne</li>
+                                    <li>Pulpo al pesto afrutado</li>
+                                    <li>Caldo de pescador</li>
+                                    <li>Ensalada de brócoli con salsa de queso crema y ajo</li>
+                                    <li>Empanaditas de cangrejo agridulce</li>
+                                    <li>Volován con ensaladilla de atún</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-4">
+                                <ol start="19">
+                                    <li>Tostón relleno de crema de calabaza con refrito de bacon y ajo</li>
+                                    <li>Tartar de aguacate con camarones y naranja</li>
+                                    <li>Cazuelita de cobo al ajillo y sofrito de tomate</li>
+                                    <li>Ensalada de atún y huevos de codorniz</li>
+                                    <li>Supremas de pepino y camarones aliñados con yogurt de guajiro y aroma de comino</li>
+                                    <li>Huevo con relleno marinero</li>
+                                    <li>Albondiguillas al queso y compota de remolacha</li>
+                                    <li>Sopa de verduritas y raviolis</li>
+                                    <li>Bolitas con yuca</li>
+                                    <li>Deditos de pescado con mayonesa de hierbas</li>
+                                </ol>
+                            </div>
                         </div>
-                        <div>
-                            <ol>
-                                <li>Tilapia al papillote cocida en guiso de vegetales</li>
-                                <li>Brochetas de camarones con piña y cebolla, aderezadas con guacamole</li>
-                                <li>Brocheta de cerdo al bbq hot and sweet</li>
-                                <li>Pargo asado en sal con salsa de mango</li>
-                                <li>Solomillo de cerdo albardado con bacon en licuado de ciruelas pasas</li>
-                                <li>Hamburguesas hogareñas</li>
-                                <li>Albóndigas de macabí en salsa blanca</li>
-                                <li>Albóndigas de cerdo en salsa de cebollas</li>
-                                <li>Capas de berenjena con ragú</li>
-                            </ol>
-                        </div>
-                        <div>
-                            <ol>
-                                <li>Filete de cerdo y coulis de habichuelas</li>
-                                <li>Milhojas de calabaza con aporreado de cerdo</li>
-                                <li>Fricasé de carnero con refrito de ñame</li>
-                                <li>Ñoquis de yuca a la bolognesa</li>
-                                <li>Cintas verdes al ajo</li>
-                                <li>Camarones al romero con papas y tomates</li>
-                                <li>Pastel de harina de maíz con pollo en aporreado</li>
-                                <li>Codorniz en salsa de leche</li>
-                                <li>Arroz con pollo</li>
-                                <li>Arroz verde a lo marinero</li>
-                            </ol>
-                        </div>
-                    </div>
-                </article>
+                    </article>
 
-                <!-- Guarniciones -->
-                <article id="3">
-                    <h3>Guarniciones</h3>
-                    <div class="chapter-grid">
-                        <div>
-                            <ol>
-                                <li>PasteL de yuca y arroz con moros</li>
-                                <li>Machuquillo de plátano</li>
-                                <li>TamaL en cazuela con carne</li>
-                                <li>Grillada de vegetales</li>
-                            </ol>
+                    <!-- Segundos Platos -->
+                    <article id="2" class="mb-5">
+                        <h3 class="h4 fw-bold pb-2 border-bottom border-danger border-2 mb-3">Segundos Platos</h3>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <ol>
+                                    <li>Tacos a lo habanero</li>
+                                    <li>Casabe con tasajo de cordero</li>
+                                    <li>Costillitas de cerdo a lo criollo</li>
+                                    <li>Lomo de cerdo a las brasas, pincelado con tamarindo y orégano</li>
+                                    <li>Higadillos de conejo a la pimienta</li>
+                                    <li>De conejo en miel y mostaza</li>
+                                    <li>Rollo de pollo con camarones y reducción de naranja, piña y jengibre</li>
+                                    <li>Muslos de pollo asados en cazuela con mapén a lo habanero</li>
+                                    <li>Pechuga de pato en confitura de tomate y jengibre</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-4">
+                                <ol start="10">
+                                    <li>Tilapia al papillote cocida en guiso de vegetales</li>
+                                    <li>Brochetas de camarones con piña y cebolla, aderezadas con guacamole</li>
+                                    <li>Brocheta de cerdo al bbq hot and sweet</li>
+                                    <li>Pargo asado en sal con salsa de mango</li>
+                                    <li>Solomillo de cerdo albardado con bacon en licuado de ciruelas pasas</li>
+                                    <li>Hamburguesas hogareñas</li>
+                                    <li>Albóndigas de macabí en salsa blanca</li>
+                                    <li>Albóndigas de cerdo en salsa de cebollas</li>
+                                    <li>Capas de berenjena con ragú</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-4">
+                                <ol start="19">
+                                    <li>Filete de cerdo y coulis de habichuelas</li>
+                                    <li>Milhojas de calabaza con aporreado de cerdo</li>
+                                    <li>Fricasé de carnero con refrito de ñame</li>
+                                    <li>Ñoquis de yuca a la bolognesa</li>
+                                    <li>Cintas verdes al ajo</li>
+                                    <li>Camarones al romero con papas y tomates</li>
+                                    <li>Pastel de harina de maíz con pollo en aporreado</li>
+                                    <li>Codorniz en salsa de leche</li>
+                                    <li>Arroz con pollo</li>
+                                    <li>Arroz verde a lo marinero</li>
+                                </ol>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
 
-                <!-- Postres -->
-                <article id="4">
-                    <h3>Los postres</h3>
-                    <div class="chapter-grid">
-                        <div>
-                            <ol>
-                                <li>Sobrecrema de vainilla, arroz con leche y glaseado de yema</li>
-                                <li>Torrejas a las tres leches con helado de coco</li>
-                                <li>Boniatillo de ayer y de hoy</li>
-                                <li>Pastel helado de profiteroles con nata</li>
-                                <li>Tarta de yogur</li>
-                                <li>Helado a las tres leches con tropezones de tiramisú</li>
-                                <li>Tarta de queso con confitura de remolacha</li>
-                            </ol>
+                    <!-- Guarniciones -->
+                    <article id="3" class="mb-5">
+                        <h3 class="h4 fw-bold pb-2 border-bottom border-danger border-2 mb-3">Guarniciones</h3>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <ol>
+                                    <li>Pastel de yuca y arroz con moros</li>
+                                    <li>Machuquillo de plátano</li>
+                                    <li>Tamal en cazuela con carne</li>
+                                    <li>Grillada de vegetales</li>
+                                </ol>
+                            </div>
                         </div>
-                        <div>
-                            <ol>
-                                <li>Magdalenas de naranja con glaseado de queso crema</li>
-                                <li>Arepas con crema de piña</li>
-                                <li>Majarete chic</li>
-                                <li>Torta de chocolate y maracuyá</li>
-                                <li>Torta de limón</li>
-                                <li>Buñuelitos de fin de año en jarabe de caña santa y anís</li>
-                                <li>Rollo con pasta azucarada, jalea de fresas y pétalos de rosas</li>
-                            </ol>
-                        </div>
-                        <div>
-                            <ol>
-                                <li>Crema de chocolate y ron</li>
-                                <li>Perlas de mango con chocolate y nata</li>
-                                <li>Bizcocho marmoleado con jarabe de güira y jalea</li>
-                                <li>Flan de calabaza con pasas, a la naranja</li>
-                                <li>Las trufas de la discordia</li>
-                                <li>Pan dulce con fruta bomba confitada</li>
-                                <li>Otra tentación con plátano</li>
-                                <li>Cañas de guayaba y queso crema</li>
-                            </ol>
-                        </div>
-                    </div>
-                </article>
+                    </article>
 
-                <!-- Otros -->
-                <article id="5">
-                    <h3>Otros</h3>
-                    <div class="chapter-grid">
-                        <div>
-                            <p>Preparaciones Básicas</p>
-                            <ol>
-                                <li>Hojaldre</li>
-                                <li>Crema pastelera</li>
-                                <li>Pasta Choux</li>
-                                <li>Temperar el chocolate</li>
-                                <li>Salsa bechamel</li>
-                                <li>Mayonesa</li>
-                                <li>Aceites</li>
-                                <li>Vinagre</li>
-                                <li>Encurtidos</li>
-                                <li>La sal</li>
-                                <li>Deshidratados</li>
-                                <li>Yogurt</li>
-                                <li>Mieles</li>
-                                <li>Azúcares</li>
-                                <li>Tabla de cocción del azúcar</li>
-                            </ol>
+                    <!-- Postres -->
+                    <article id="4" class="mb-5">
+                        <h3 class="h4 fw-bold pb-2 border-bottom border-danger border-2 mb-3">Los postres</h3>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <ol>
+                                    <li>Sobrecrema de vainilla, arroz con leche y glaseado de yema</li>
+                                    <li>Torrejas a las tres leches con helado de coco</li>
+                                    <li>Boniatillo de ayer y de hoy</li>
+                                    <li>Pastel helado de profiteroles con nata</li>
+                                    <li>Tarta de yogur</li>
+                                    <li>Helado a las tres leches con tropezones de tiramisú</li>
+                                    <li>Tarta de queso con confitura de remolacha</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-4">
+                                <ol start="8">
+                                    <li>Magdalenas de naranja con glaseado de queso crema</li>
+                                    <li>Arepas con crema de piña</li>
+                                    <li>Majarete chic</li>
+                                    <li>Torta de chocolate y maracuyá</li>
+                                    <li>Torta de limón</li>
+                                    <li>Buñuelitos de fin de año en jarabe de caña santa y anís</li>
+                                    <li>Rollo con pasta azucarada, jalea de fresas y pétalos de rosas</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-4">
+                                <ol start="15">
+                                    <li>Crema de chocolate y ron</li>
+                                    <li>Perlas de mango con chocolate y nata</li>
+                                    <li>Bizcocho marmoleado con jarabe de güira y jalea</li>
+                                    <li>Flan de calabaza con pasas, a la naranja</li>
+                                    <li>Las trufas de la discordia</li>
+                                    <li>Pan dulce con fruta bomba confitada</li>
+                                    <li>Otra tentación con plátano</li>
+                                    <li>Cañas de guayaba y queso crema</li>
+                                </ol>
+                            </div>
                         </div>
-                        <div>
-                            <p>Consejos para la selección de alimentos</p>
-                            <p>Para elaborar deliciosos platos es muy importante tener una cocina bien surtida.
-                                Ciertamente
-                                hay compras que deben hacerse el mismo día pero otras pueden comprarse con antelación.
-                            </p>
-                            <ol>
-                                <li>Los productos en conserva</li>
-                                <li>Las verduras</li>
-                                <li>Las frutas</li>
-                                <li>Los pescados</li>
-                                <li>Los mariscos</li>
-                                <li>Las carnes</li>
-                                <li>Hierbas aromáticas</li>
-                                <li>Las especias</li>
-                                <li>Los huevos</li>
-                            </ol>
-                        </div>
-                        <div>
-                            <p>Otros consejos</p>
-                            <ol>
-                                <li>Glosario</li>
-                                <li>Tablas de equivalencia y temperatura</li>
-                            </ol>
-                            <p>Consejos útiles para la conservación de alimentos:</p>
-                            <ol>
-                                <li>Los productos en conserva</li>
-                                <li>Las verduras</li>
-                                <li>Las frutas</li>
-                                <li>Los pescados</li>
-                                <li>Los mariscos</li>
-                                <li>Las carnes</li>
-                                <li>Hierbas aromáticas</li>
-                                <li>Las especias</li>
-                                <li>Los huevos</li>
-                            </ol>
-                        </div>
-                    </div>
-                </article>
+                    </article>
 
-            </section>
+                    <!-- Otros -->
+                    <article id="5" class="mb-5">
+                        <h3 class="h4 fw-bold pb-2 border-bottom border-danger border-2 mb-3">Otros</h3>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <p class="fw-bold">Preparaciones Básicas</p>
+                                <ol>
+                                    <li>Hojaldre</li>
+                                    <li>Crema pastelera</li>
+                                    <li>Pasta Choux</li>
+                                    <li>Temperar el chocolate</li>
+                                    <li>Salsa bechamel</li>
+                                    <li>Mayonesa</li>
+                                    <li>Aceites</li>
+                                    <li>Vinagre</li>
+                                    <li>Encurtidos</li>
+                                    <li>La sal</li>
+                                    <li>Deshidratados</li>
+                                    <li>Yogurt</li>
+                                    <li>Mieles</li>
+                                    <li>Azúcares</li>
+                                    <li>Tabla de cocción del azúcar</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="fw-bold">Consejos para la selección de alimentos</p>
+                                <p>Para elaborar deliciosos platos es muy importante tener una cocina bien surtida.
+                                    Ciertamente hay compras que deben hacerse el mismo día pero otras pueden comprarse con antelación.
+                                </p>
+                                <ol>
+                                    <li>Los productos en conserva</li>
+                                    <li>Las verduras</li>
+                                    <li>Las frutas</li>
+                                    <li>Los pescados</li>
+                                    <li>Los mariscos</li>
+                                    <li>Las carnes</li>
+                                    <li>Hierbas aromáticas</li>
+                                    <li>Las especias</li>
+                                    <li>Los huevos</li>
+                                </ol>
+                            </div>
+                            <div class="col-md-4">
+                                <p class="fw-bold">Otros consejos</p>
+                                <ol>
+                                    <li>Glosario</li>
+                                    <li>Tablas de equivalencia y temperatura</li>
+                                </ol>
+                                <p class="fw-bold">Consejos útiles para la conservación de alimentos:</p>
+                                <ol>
+                                    <li>Los productos en conserva</li>
+                                    <li>Las verduras</li>
+                                    <li>Las frutas</li>
+                                    <li>Los pescados</li>
+                                    <li>Los mariscos</li>
+                                    <li>Las carnes</li>
+                                    <li>Hierbas aromáticas</li>
+                                    <li>Las especias</li>
+                                    <li>Los huevos</li>
+                                </ol>
+                            </div>
+                        </div>
+                    </article>
+
+                </section>
+            </div>
         </div>
     </main>
 
-    <footer>
-        <span>By <span class="red">LMTRX</span></span>
+    <footer class="py-4 text-center mt-5">
+        <div class="footer-marquee overflow-hidden">
+            <p class="mb-0">
+                By <span class="red fw-bold">LMTRX</span>
+            </p>
+        </div>
     </footer>
-    <a href="#top" class="btn-subir">
-        <img src="../Imagenes/icon.png" alt="ayudante-de-pagina">
+    
+    <a href="#top" class="btn-subir position-fixed" style="right: 20px; bottom: 45px; z-index: 1000;">
+        <img src="../Imagenes/icon.png" alt="ayudante-de-pagina" style="width: 100px; cursor: pointer;">
     </a>
 
-    <script src="../js/menu.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    
 </body>
 
 </html>

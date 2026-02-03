@@ -1,16 +1,4 @@
-/* ===== BASE ===== */
-
-body, html {
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-main { flex: 1; }
-
-/* ===== CARRUSEL ===== */
+/*  CARRUSEL  */
 .carrusel-v3 {
     position: relative;
     width: 100%;
@@ -19,6 +7,7 @@ main { flex: 1; }
     height: 400px;
     overflow: hidden;
 }
+
 .carrusel-track {
     display: flex;
     justify-content: center;
@@ -26,13 +15,14 @@ main { flex: 1; }
     position: relative;
     height: 100%;
 }
+
 .carrusel-item {
     position: absolute;
     top: 50%;
     left: 50%;
     width: 300px;
     height: 300px;
-    background: #fff;
+    background: var(--card-bg) !important;
     border-radius: 16px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.25);
     transform: translate(-50%, -50%) scale(0.7);
@@ -41,196 +31,334 @@ main { flex: 1; }
     text-align: center;
     padding: 10px;
 }
+
 .carrusel-item img {
     width: 100%;
     height: 180px;
     object-fit: cover;
     border-radius: 12px;
 }
+
+.carrusel-item h2 {
+    color: var(--texto) !important;
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
 .carrusel-item.activo {
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
     z-index: 10;
 }
+
 .carrusel-item.izquierda {
     transform: translate(-120%, -50%) scale(0.8);
     opacity: 0.7;
     z-index: 5;
 }
+
 .carrusel-item.derecha {
     transform: translate(20%, -50%) scale(0.8);
     opacity: 0.7;
     z-index: 5;
 }
 
-/* Botones */
-.carrusel-prev, .carrusel-next {
+/* Botones del carrusel */
+.carrusel-prev, 
+.carrusel-next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     width: 50px;
     height: 50px;
-    background: #c92121;
+    background: var(--acento) !important;
     border-radius: 50%;
-    color: #fff;
+    color: var(--blanco) !important;
     font-size: 24px;
     border: none;
     cursor: pointer;
     z-index: 20;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.carrusel-prev { left: 10px; }
-.carrusel-next { right: 10px; }
 
-/* ===== SLIDEOUT ===== */
+.carrusel-prev:hover,
+.carrusel-next:hover {
+    background: var(--texto) !important;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carrusel-prev { 
+    left: 10px; 
+}
+
+.carrusel-next { 
+    right: 10px; 
+}
+
+/* Botón abrir slide dentro del carrusel */
+.abrir-slide {
+    margin-top: 10px;
+    padding: 8px 12px;
+}
+
+/*  SLIDEOUT (Panel lateral)  */
 .slideout {
     position: fixed;
     top: 0;
     right: 0;
     width: 350px;
     height: 100%;
-    background: #fff;
+    background: var(--card-bg) !important;
     z-index: 9999;
     transform: translateX(100%);
     transition: transform 0.3s ease;
     box-shadow: -5px 0 15px rgba(0,0,0,0.25);
-    padding: 20px;
+    padding: 0;
     overflow-y: auto;
-    border-radius: 0 16px 16px 0;
+    border-radius: 0;
 }
-.slideout.active { transform: translateX(0); }
 
-/* overlay */
+.slideout.active { 
+    transform: translateX(0); 
+}
+
+/* Header del slideout */
+.slideout-header {
+    position: relative;
+    overflow: hidden;
+    height: 160px;
+    margin-bottom: 20px;
+}
+
+.slideout-header .fondo {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.slideout-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--negro) !important;
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+    margin: 0;
+    padding: 0 10px;
+}
+
+/* Contenido del slideout */
+.slideout-content {
+    padding: 0 20px 20px 20px;
+    color: var(--texto) !important;
+}
+
+.slideout-content h4 {
+    color: var(--texto) !important;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.slideout-content p,
+.slideout-content li {
+    color: var(--texto) !important;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+.slideout-content .list-unstyled li {
+    margin-bottom: 5px;
+}
+
+.slideout-content hr {
+    border-color: var(--gris-oscuro) !important;
+    opacity: 0.3;
+}
+
+/* Subheader */
+.subheader {
+    color: var(--acento) !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Badges personalizados */
+.slideout .badge {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+}
+
+/* Overlay oscuro */
 .slideout-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.35);
+    background: rgba(0,0,0,0.6);
     z-index: 9998;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.25s ease;
 }
+
 .slideout-overlay.active {
     opacity: 1;
     pointer-events: auto;
 }
-.sidenav{
-    list-style: none;
-    text-align: center;
-}
 
-.subheader{
-    cursor: initial;
-    pointer-events: none;
-    color: rgba(0,0,0,0.54);
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 48px
-}
-
-.user-view {
-    position: relative; /* contenedor relativo */
-    overflow: hidden;
-    height: 160px; /* altura de la cabecera */
-    margin: -20px -20px 20px -20px; /* opcional si quieres romper el padding del slideout */
-}
-
-.user-view .fondo {
-    width: calc(100% + 40px); /* para compensar el padding del slideout */
-    height: 160px;
-    object-fit: cover;
-    border-radius: 0 0 16px 16px; /* bordes redondeados solo abajo */
-    display: block;
-    margin-left: -20px; /* romper padding izquierdo */
-    margin-right: -20px; /* romper padding derecho */
-}
-
-.user-view h4 {
-    position: absolute;        /* para posicionarlo sobre la imagen */
-    top: 50%;              /* margen desde la base */
-    left: 50%;              /* coloca el borde izquierdo en el centro*/
-    transform: translate(-50%, -50%);                /* mueve el elemento la mitad de su propio ancho en ambas direcciones vertical y horizontal */
-    text-align: center;
-    color: var(--negro);              /* texto visible sobre la imagen */
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-shadow: 2px 2px 6px rgba(0,0,0,0.7); /* sombra para destacar sobre la imagen */
-    margin: 0;
-}
-.divider {
-    height: 1px;
-    overflow: hidden;
-    background-color: #e0e0e0
-}
-.left-align{
-    text-align: left;
-}
-
-/* botones */
+/* Botón cerrar slide */
 .cerrar-slide {
-    background: #c92121;
-    color: #fff;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-    margin-top: 30px;
-    width: 100%;
-}
-
-.abrir-slide {
+    margin: 20px;
     margin-top: 10px;
-    padding: 8px 12px;
-    border: none;
-    background: #c92121;
-    color: #fff;
-    border-radius: 8px;
-    cursor: pointer;
 }
 
-/* ===== RESPONSIVE ===== */
+/*  RESPONSIVE  */
 
 /* Móviles */
 @media (max-width: 500px) {
-    .carrusel-item { width: 240px; height: 240px; }
-    .slideout { width: 90%; padding: 15px; }
-    .user-view { height: 140px; }
-    .user-view .fondo { height: 140px; width: calc(100% + 30px); margin-left: -15px; margin-right: -15px; }
-    .carrusel-prev, .carrusel-next{width: 25px; font-size: 20px; height: 25px;}
-
-    /* Texto más pequeño */
-    body, .slideout p, .slideout li, .subheader {
-        font-size: 14px;
-    }
-    .carrusel-item.tam { width: 240px; height: 270px; }
-    .carrusel-item.activo .abrir-slide{
-        margin-top: 30px;
+    .carrusel-v3 {
+        height: 350px;
     }
     
+    .carrusel-item { 
+        width: 240px; 
+        height: 240px; 
+    }
+    
+    .carrusel-item img {
+        height: 140px;
+    }
+    
+    .carrusel-item h2 {
+        font-size: 1rem;
+    }
+    
+    .slideout { 
+        width: 90%; 
+    }
+    
+    .slideout-header { 
+        height: 140px; 
+    }
+    
+    .slideout-header .fondo { 
+        height: 140px; 
+    }
+    
+    .slideout-title {
+        font-size: 1.1rem;
+    }
+    
+    .carrusel-prev, 
+    .carrusel-next {
+        width: 35px; 
+        height: 35px;
+        font-size: 20px;
+    }
+
+    .slideout-content,
+    .slideout-content p,
+    .slideout-content li {
+        font-size: 14px;
+    }
+    
+    .slideout-content h4 {
+        font-size: 1rem;
+    }
+    
+    .abrir-slide {
+        margin-top: 5px;
+        padding: 6px 10px;
+        font-size: 0.85rem;
+    }
 }
 
 /* Tablets */
 @media (min-width: 501px) and (max-width: 900px) {
-    .carrusel-item { width: 260px; height: 280px; }
-    .slideout { width: 300px; padding: 18px; }
-    .user-view { height: 150px; }
-    .user-view .fondo { height: 150px; width: calc(100% + 36px); margin-left: -18px; margin-right: -18px; }
+    .carrusel-item { 
+        width: 260px; 
+        height: 280px; 
+    }
+    
+    .carrusel-item img {
+        height: 160px;
+    }
+    
+    .slideout { 
+        width: 300px; 
+    }
+    
+    .slideout-header { 
+        height: 150px; 
+    }
+    
+    .slideout-header .fondo { 
+        height: 150px; 
+    }
 
-    /* Texto ligeramente más pequeño */
-    body, .slideout p, .slideout li, .subheader {
+    .slideout-content,
+    .slideout-content p,
+    .slideout-content li {
         font-size: 15px;
     }
 }
 
 /* Pantallas grandes */
 @media (min-width: 1201px) {
-    .carrusel-v3 { max-width: 1400px; height: 500px; }
-    .carrusel-item { width: 300px; height: 300px; }
-    .slideout { width: 380px; padding: 25px; }
-    .user-view { height: 180px; }
-    .user-view .fondo { height: 180px; width: calc(100% + 50px); margin-left: -25px; margin-right: -25px; }
+    .carrusel-v3 { 
+        max-width: 1400px; 
+        height: 500px; 
+    }
+    
+    .carrusel-item { 
+        width: 340px; 
+        height: 340px; 
+    }
+    
+    .carrusel-item img {
+        height: 200px;
+    }
+    
+    .carrusel-item h2 {
+        font-size: 1.3rem;
+    }
+    
+    .slideout { 
+        width: 380px; 
+    }
+    
+    .slideout-header { 
+        height: 180px; 
+    }
+    
+    .slideout-header .fondo { 
+        height: 180px; 
+    }
 
-    /* Texto más grande para pantallas grandes */
-    body, .slideout p, .slideout li, .subheader {
+    .slideout-content,
+    .slideout-content p,
+    .slideout-content li {
         font-size: 16px;
     }
+    
+    .slideout-content h4 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mejoras de accesibilidad */
+.carrusel-prev:focus,
+.carrusel-next:focus,
+.abrir-slide:focus,
+.cerrar-slide:focus {
+    outline: 3px solid var(--acento);
+    outline-offset: 2px;
 }

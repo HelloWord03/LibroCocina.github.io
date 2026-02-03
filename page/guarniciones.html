@@ -1,226 +1,285 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="Ariannet Alvarez">
-<meta name="school" content="CIFP Ciudad Jardín">
-<meta name="date" content="2025-11-1">
-<meta name="last-modified" content="2025-11-15">
-<title>Guarniciones</title>
-<link rel="stylesheet" href="../css/estilo_base.css">
-<link rel="stylesheet" href="../css/estilo_menu.css">
-<link rel="stylesheet" href="../css/carrusel.css">
-<link rel="stylesheet" href="../css/estilo_carrusel2.css">
-
-<!-- Fuentes -->
-<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:500,600&display=swap">
-<!-- favicon -->
-	<link rel="shortcut icon" type="image/png" href="../Imagenes/icon.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ariannet Alvarez">
+    <meta name="school" content="CIFP Ciudad Jardín">
+    <meta name="date" content="2025-11-1">
+    <meta name="last-modified" content="2025-11-15">
+    <title>Guarniciones</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="../css/estilo_base.css">
+    <link rel="stylesheet" href="../css/carrusel.css">
+    
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="../Imagenes/icon.png">
 </head>
-<body>
 
-<header>
-    <h1>Guarniciones</h1>
-    <nav class="navbar">
-        <div class="nav-logo">
-            <a href="../index.html">HOME</a>
-        </div>
-        <ul class="nav-links">
-            <li><a href="prologo.html">Prólogo</a></li>
-            <li><a href="indice.html">Índice</a></li>
-            <li><a href="ligeros.html">Ligeros</a></li>
-            <li><a href="segundos_platos.html">Segundos Platos</a></li>
-            <li><a href="guarniciones.html" class="aqui">Guarniciones</a></li>
-            <li><a href="postres.html">Los Postres</a></li>
-            <li><a href="otros.html">Otros</a></li>
-            <li><a href="formulario.html">Contacto</a></li>
-        </ul>
-        <div class="nav-toggle" id="navToggle">
-            <span></span>
-            <span></span>
-            <span></span>
+<body data-theme="default">
+
+    <header class="text-center py-5">
+        <h1 class="display-4 fw-semibold">Guarniciones</h1>
+    </header>
+
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold" href="../index.html" style="letter-spacing: 1px;">HOME</a>
+            
+            <button class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" 
+                    aria-expanded="false" 
+                    aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="prologo.html">Prólogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="indice.html">Índice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ligeros.html">Ligeros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="segundos_platos.html">Segundos Platos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active aqui" href="guarniciones.html">Guarniciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="postres.html">Los Postres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="otros.html">Otros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-</header>
 
-<main>
-<div class="carrusel-v3">
-    <button class="carrusel-prev">‹</button>
-    <div class="carrusel-track">
-        <!-- Receta 1 -->
-        <div class="carrusel-item">
-            <img src="../Imagenes/pastel_yuca.jpg" alt="Pastel de Yuca y arroz con moros">
-            <h2>Pastel de Yuca</h2>
-            <p>y arroz con moros</p>
-            <button class="abrir-slide" data-target="slide1">Ver receta</button>
+    <main class="flex-grow-1">
+        <div class="carrusel-v3">
+            <button class="carrusel-prev" aria-label="Receta anterior">‹</button>
+            <div class="carrusel-track">
+                <!-- Receta 1 -->
+                <div class="carrusel-item">
+                    <img src="../Imagenes/pastel_yuca.jpg" alt="Pastel de Yuca y arroz con moros">
+                    <h2>Pastel de Yuca</h2>
+                    <button class="abrir-slide btn btn-custom" data-target="slide1">Ver receta</button>
+                </div>
+                <!-- Receta 2 -->
+                <div class="carrusel-item">
+                    <img src="../Imagenes/tamal_cazuela.jpg" alt="Tamal en cazuela con carne">
+                    <h2>Tamal en cazuela</h2>
+                    <button class="abrir-slide btn btn-custom" data-target="slide2">Ver receta</button>
+                </div>
+                <!-- Receta 3 -->
+                <div class="carrusel-item">
+                    <img src="../Imagenes/machuquillo.jpg" alt="Machuquillo de plátano">
+                    <h2>Machuquillo</h2>
+                    <button class="abrir-slide btn btn-custom" data-target="slide3">Ver receta</button>
+                </div>
+                <!-- Receta 4 -->
+                <div class="carrusel-item">
+                    <img src="../Imagenes/grillada.jpg" alt="Grillada de vegetales">
+                    <h2>Grillada</h2>
+                    <button class="abrir-slide btn btn-custom" data-target="slide4">Ver receta</button>
+                </div>
+            </div>
+            <button class="carrusel-next" aria-label="Siguiente receta">›</button>
         </div>
-        <!-- Receta 2 -->
-        <div class="carrusel-item">
-            <img src="../Imagenes/tamal_cazuela.jpg" alt="Tamal en cazuela con carne">
-            <h2>Tamal en cazuela</h2>
-            <p>con carne</p>
-            <button class="abrir-slide" data-target="slide2">Ver receta</button>
+    </main>
+
+    <!-- Slideouts -->
+    <aside id="slide1" class="slideout">
+        <div class="slideout-header">
+            <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
+            <h3 class="slideout-title">Pastel de Yuca y arroz con moros</h3>
         </div>
-        <!-- Receta 3 -->
-        <div class="carrusel-item">
-            <img src="../Imagenes/machuquillo.jpg" alt="Machuquillo de plátano">
-            <h2>Machuquillo</h2>
-            <p>de plátano</p>
-            <button class="abrir-slide" data-target="slide3">Ver receta</button>
+        
+        <div class="slideout-content">
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">KcaL 197.3 / p 2.4 / g 8.3 / c 27.9</span>
+            </div>
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">Elaboración: 10 min</span>
+                <span class="badge bg-secondary me-2">Complejidad: baja</span>
+            </div>
+            <div class="mb-3">
+                <span class="badge bg-danger me-2">Temperatura: caliente</span>
+                <span class="badge bg-dark">Porciones: 6</span>
+            </div>
+            
+            <hr>
+            
+            <h4 class="subheader">Ingredientes</h4>
+            <ul class="list-unstyled">
+                <li>• 1 taza de yuca cocida no muy blanda</li>
+                <li>• 6 cucharadas de mojo criollo</li>
+                <li>• 5 cucharadas de empellas de cerdo</li>
+                <li>• 3 ½ taza de arroz moros no muy desgranado</li>
+            </ul>
+            
+            <h4 class="subheader mt-4">Preparación</h4>
+            <p>Aplastar la yuca, mezclar con el mojo, las empellas y acomodar en el fondo de un molde desmoldable de 15 cm aproximadamente. Colocar el arroz moro bien repartido encima y presionar suavemente. Montaje: Cortar y servir.</p>
         </div>
-        <!-- Receta 4 -->
-        <div class="carrusel-item">
-            <img src="../Imagenes/grillada.jpg" alt="Grillada de vegetales">
-            <h2>Grillada</h2>
-            <p>de vegetales</p>
-            <button class="abrir-slide" data-target="slide4">Ver receta</button>
+        
+        <button class="cerrar-slide btn btn-custom w-100">Cerrar</button>
+    </aside>
+
+    <aside id="slide2" class="slideout">
+        <div class="slideout-header">
+            <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
+            <h3 class="slideout-title">Tamal en cazuela con carne</h3>
         </div>
-    </div>
-    <button class="carrusel-next">›</button>
-</div>
-</main>
+        
+        <div class="slideout-content">
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">KcaL 201 / p 6.7 / g 9.3 / c 26.3</span>
+            </div>
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">Elaboración: 30 min</span>
+                <span class="badge bg-secondary me-2">Complejidad: baja</span>
+            </div>
+            <div class="mb-3">
+                <span class="badge bg-danger me-2">Temperatura: caliente</span>
+                <span class="badge bg-dark">Porciones: 8</span>
+            </div>
+            
+            <hr>
+            
+            <h4 class="subheader">Ingredientes</h4>
+            <ul class="list-unstyled">
+                <li>• 200 g de carne de cerdo en dados pequeños</li>
+                <li>• 2 cucharadas de manteca de cerdo</li>
+                <li>• ½ taza de ajíes trinchados</li>
+                <li>• 1 cebolla trinchada</li>
+                <li>• 10 g de ajo trinchado</li>
+                <li>• 2 cucharadas de pasta de tomate</li>
+                <li>• ½ cucharadita de comino</li>
+                <li>• Sal al gusto</li>
+                <li>• 460 g de maíz tierno rallado</li>
+                <li>• 500 ml de agua o caldo</li>
+            </ul>
+            
+            <h4 class="subheader mt-4">Preparación</h4>
+            <p>En una cazuela sellar la carne con la manteca, agregar especias, pasta de tomate y cocinar hasta que ablande. Agregar el maíz, revolver e incorporar el agua o caldo. Cocinar a fuego lento 25-30 min, puntear de sal y cocer 10 min más. Servir.</p>
+        </div>
+        
+        <button class="cerrar-slide btn btn-custom w-100">Cerrar</button>
+    </aside>
 
-<!-- Slideouts -->
-<aside id="slide1" class="slideout">
-    <ul class="sidenav">
-        <li>
-            <div class="user-view">
-                <div class="background"><img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo"></div>
-                <h3>Pastel de Yuca y arroz con moros</h3>
+    <aside id="slide3" class="slideout">
+        <div class="slideout-header">
+            <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
+            <h3 class="slideout-title">Machuquillo de plátano</h3>
+        </div>
+        
+        <div class="slideout-content">
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">KcaL 275.8 / p 2.6 / g 21 / c 19.8</span>
             </div>
-        </li>
-        <li>KcaL 197.3 / p 2.4 / g 8.3 / c 27.9</li>
-        <li>Elaboración: 10 min / Complejidad: baja</li>
-        <li>Temperatura: caliente / Porciones: 6</li>
-        <li><div class="divider"></div></li>
-        <li><a class="subheader">Ingredientes</a></li>
-        <li class="left-align">
-            <div>
-                <p>1 taza de yuca cocida no muy blanda</p>
-                <p>6 cucharadas de mojo criollo</p>
-                <p>5 cucharadas de empellas de cerdo</p>
-                <p>3 ½ taza de arroz moros no muy desgranado</p>
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">Elaboración: 30 min</span>
+                <span class="badge bg-secondary me-2">Complejidad: baja</span>
             </div>
-        </li>
-        <li><a class="subheader">Steps</a></li>
-        <li class="left-align">
-            Aplastar la yuca, mezclar con el mojo, las empellas y acomodar en el fondo de un molde desmoldable de 15 cm aproximadamente. Colocar el arroz moro bien repartido encima y presionar suavemente. Montaje: Cortar y servir.
-        </li>
-    </ul>
-    <button class="cerrar-slide">Cerrar</button>
-</aside>
+            <div class="mb-3">
+                <span class="badge bg-danger me-2">Temperatura: caliente</span>
+                <span class="badge bg-dark">Porciones: 4</span>
+            </div>
+            
+            <hr>
+            
+            <h4 class="subheader">Ingredientes</h4>
+            <ul class="list-unstyled">
+                <li>• 2 plátanos vianda verde</li>
+                <li>• 2 plátanos vianda maduros</li>
+                <li>• Empellas de cerdo al gusto</li>
+                <li>• 5 dientes de ajo machacado</li>
+                <li>• 4 cucharadas de manteca de cerdo</li>
+                <li>• 3 cucharadas de zumo de naranja agria (opcional)</li>
+                <li>• Sal al gusto</li>
+            </ul>
+            
+            <h4 class="subheader mt-4">Preparación</h4>
+            <p>Pelar y hervir los plátanos con sal hasta que se ablanden. Escurrir y aplastar. Hacer un mojo con manteca, ajo, empellas y zumo de naranja agria. Mezclar con el puré y servir.</p>
+        </div>
+        
+        <button class="cerrar-slide btn btn-custom w-100">Cerrar</button>
+    </aside>
 
-<aside id="slide2" class="slideout">
-    <ul class="sidenav">
-        <li>
-            <div class="user-view">
-                <div class="background"><img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo"></div>
-                <h3>Tamal en cazuela con carne</h3>
+    <aside id="slide4" class="slideout">
+        <div class="slideout-header">
+            <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
+            <h3 class="slideout-title">Grillada de vegetales</h3>
+        </div>
+        
+        <div class="slideout-content">
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">KcaL 98 / p 1.5 / g 8.1 / c 5.6</span>
             </div>
-        </li>
-        <li>KcaL 201 / p 6.7 / g 9.3 / c 26.3</li>
-        <li>Elaboración: 30 min / Complejidad: baja</li>
-        <li>Temperatura: caliente / Porciones: 8</li>
-        <li><div class="divider"></div></li>
-        <li><a class="subheader">Ingredientes</a></li>
-        <li class="left-align">
-            <div>
-                <p>200 g de carne de cerdo en dados pequeños</p>
-                <p>2 cucharadas de manteca de cerdo</p>
-                <p>½ taza de ajíes trinchados</p>
-                <p>1 cebolla trinchada</p>
-                <p>10 g de ajo trinchado</p>
-                <p>2 cucharadas de pasta de tomate</p>
-                <p>½ cucharadita de comino</p>
-                <p>Sal al gusto</p>
-                <p>460 g de maíz tierno rallado</p>
-                <p>500 ml de agua o caldo</p>
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">Elaboración: 15 min</span>
+                <span class="badge bg-secondary me-2">Complejidad: baja</span>
             </div>
-        </li>
-        <li><a class="subheader">Steps</a></li>
-        <li class="left-align">
-            En una cazuela sellar la carne con la manteca, agregar especias, pasta de tomate y cocinar hasta que ablande. Agregar el maíz, revolver e incorporar el agua o caldo. Cocinar a fuego lento 25-30 min, puntear de sal y cocer 10 min más. Servir.
-        </li>
-    </ul>
-    <button class="cerrar-slide">Cerrar</button>
-</aside>
+            <div class="mb-3">
+                <span class="badge bg-danger me-2">Temperatura: caliente</span>
+                <span class="badge bg-dark">Porciones: 4</span>
+            </div>
+            
+            <hr>
+            
+            <h4 class="subheader">Ingredientes</h4>
+            <ul class="list-unstyled">
+                <li>• ½ col mediana</li>
+                <li>• 2 tomates grandes</li>
+                <li>• 2 cebollas grandes</li>
+                <li>• 2 pimientos grandes</li>
+                <li>• 1 pepino</li>
+                <li>• 5 dientes de ajo</li>
+                <li>• ¼ taza de aceite de romero</li>
+                <li>• Sal y pimienta al gusto</li>
+                <li>• 1 cucharada de queso duro rallado</li>
+            </ul>
+            
+            <h4 class="subheader mt-4">Preparación</h4>
+            <p>Cortar la col, vegetales y ajo, unir con sal y pimienta. Cocer en sartén o plancha y rociar con aceite. Espolvorear con queso.</p>
+        </div>
+        
+        <button class="cerrar-slide btn btn-custom w-100">Cerrar</button>
+    </aside>
 
-<aside id="slide3" class="slideout">
-    <ul class="sidenav">
-        <li>
-            <div class="user-view">
-                <div class="background"><img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo"></div>
-                <h3>Machuquillo de plátano</h3>
-            </div>
-        </li>
-        <li>KcaL 275.8 / p 2.6 / g 21 / c 19.8</li>
-        <li>Elaboración: 30 min / Complejidad: baja</li>
-        <li>Temperatura: caliente / Porciones: 4</li>
-        <li><div class="divider"></div></li>
-        <li><a class="subheader">Ingredientes</a></li>
-        <li class="left-align">
-            <div>
-                <p>2 plátanos vianda verde</p>
-                <p>2 plátanos vianda maduros</p>
-                <p>Empellas de cerdo al gusto</p>
-                <p>5 dientes de ajo machacado</p>
-                <p>4 cucharadas de manteca de cerdo</p>
-                <p>3 cucharadas de zumo de naranja agria (opcional)</p>
-                <p>Sal al gusto</p>
-            </div>
-        </li>
-        <li><a class="subheader">Steps</a></li>
-        <li class="left-align">
-            Pelar y hervir los plátanos con sal hasta que se ablanden. Escurrir y aplastar. Hacer un mojo con manteca, ajo, empellas y zumo de naranja agria. Mezclar con el puré y servir.
-        </li>
-    </ul>
-    <button class="cerrar-slide">Cerrar</button>
-</aside>
+    <!-- Overlay -->
+    <div class="slideout-overlay"></div>
 
-<aside id="slide4" class="slideout">
-    <ul class="sidenav">
-        <li>
-            <div class="user-view">
-                <div class="background"><img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo"></div>
-                <h3>Grillada de vegetales</h3>
-            </div>
-        </li>
-        <li>KcaL 98 / p 1.5 / g 8.1 / c 5.6</li>
-        <li>Elaboración: 15 min / Complejidad: baja</li>
-        <li>Temperatura: caliente / Porciones: 4</li>
-        <li><div class="divider"></div></li>
-        <li><a class="subheader">Ingredientes</a></li>
-        <li class="left-align">
-            <div>
-                <p>½ col mediana</p>
-                <p>2 tomates grandes</p>
-                <p>2 cebollas grandes</p>
-                <p>2 pimientos grandes</p>
-                <p>1 pepino</p>
-                <p>5 dientes de ajo</p>
-                <p>¼ taza de aceite de romero</p>
-                <p>Sal y pimienta al gusto</p>
-                <p>1 cucharada de queso duro rallado</p>
-            </div>
-        </li>
-        <li><a class="subheader">Steps</a></li>
-        <li class="left-align">
-            Cortar la col, vegetales y ajo, unir con sal y pimienta. Cocer en sartén o plancha y rociar con aceite. Espolvorear con queso.
-        </li>
-    </ul>
-    <button class="cerrar-slide">Cerrar</button>
-</aside>
+    <footer class="py-4 text-center mt-5">
+        <div class="footer-marquee overflow-hidden">
+            <p class="mb-0">
+                By <span class="red fw-bold">LMTRX</span>
+            </p>
+        </div>
+    </footer>
 
-<!-- Overlay -->
-<div class="slideout-overlay"></div>
-
-<footer>
-    <span>By <span class="red">LMTRX</span></span>
-</footer>
-
-<script src="../js/menu.js"></script>
-<script src="../js/carrusel.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript Personalizado -->
+    <script src="../js/carrusel.js"></script>
 </body>
+
 </html>

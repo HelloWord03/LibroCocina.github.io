@@ -1,223 +1,378 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="Ariannet Alvarez">
-<meta name="school" content="CIFP Ciudad Jardín">
-<meta name="date" content="2025-11-1">
-<meta name="last-modified" content="2025-11-15">
-<title>Postres</title>
-<link rel="stylesheet" href="../css/carrusel.css">
-<link rel="stylesheet" href="../css/estilo_base.css">
-<link rel="stylesheet" href="../css/estilo_menu.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ariannet Alvarez">
+    <meta name="school" content="CIFP Ciudad Jardín">
+    <meta name="date" content="2025-11-1">
+    <meta name="last-modified" content="2025-11-15">
+    <title>Postres</title>
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:500,600&display=swap">
-<!-- favicon -->
-<link rel="shortcut icon" type="image/png" href="../Imagenes/icon.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="../css/estilo_base.css">
+    <link rel="stylesheet" href="../css/carrusel.css">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="../Imagenes/icon.png">
 </head>
-<body>
 
-<header>
-<h1>Postres</h1>
-  <nav class="navbar">
-    <div class="nav-logo">
-      <a href="../index.html">HOME</a>
-    </div>
-    <ul class="nav-links">
-        <li><a href="prologo.html">Prólogo</a></li>
-        <li><a href="indice.html">Índice</a></li>
-        <li><a href="ligeros.html">Ligeros</a></li>
-        <li><a href="segundos_platos.html">Segundos Platos</a></li>
-        <li><a href="guarniciones.html">Guarniciones</a></li>
-        <li><a href="postres.html" class="aqui">Los Postres</a></li>
-        <li><a href="otros.html">Otros</a></li>
-        <li><a href="formulario.html">Contacto</a></li>
-    </ul>
-    <div class="nav-toggle" id="navToggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
-</header>
+<body data-theme="default">
 
-<main>
-<div class="carrusel-v3">
-    <button class="carrusel-prev">‹</button>
-    <div class="carrusel-track">
-        <div class="carrusel-item tam">
-            <img src="../Imagenes/sobrecrema_vainilla.jpg" alt="Sobrecrema de Vainilla">
-            <h2>Sobrecrema de Vainilla</h2>
-            <button class="abrir-slide" data-target="slide1">Ver receta</button>
-        </div>
-        <div class="carrusel-item">
-            <img src="../Imagenes/tarta_queso.jpg" alt="Tartar de Queso">
-            <h2>Tartar de Queso</h2>
-            <button class="abrir-slide" data-target="slide2">Ver receta</button>
-        </div>
-        <div class="carrusel-item tam">
-            <img src="../Imagenes/torrejas.jpg" alt="Torrejas 3 Leches">
-            <h2>Torrejas a las 3 Leches</h2>
-            <button class="abrir-slide" data-target="slide3">Ver receta</button>
-        </div>
-        <div class="carrusel-item">
-            <img src="../Imagenes/boniatillo.jpg" alt="Boniatillo">
-            <h2>Boniatillo</h2>
-            <button class="abrir-slide" data-target="slide4">Ver receta</button>
-        </div>
-        <div class="carrusel-item tam">
-            <img src="../Imagenes/magdalena.jpg" alt="Magdalenas de Naranja">
-            <h2>Magdalenas de Naranja</h2>
-            <button class="abrir-slide" data-target="slide5">Ver receta</button>
-        </div>
-    </div>
-    <button class="carrusel-next">›</button>
-</div>
-</main>
+    <header class="text-center py-5">
+        <h1 class="display-4 fw-semibold">Postres</h1>
+    </header>
 
-<!-- Slide 1 -->
-<aside id="slide1" class="slideout">
-    <ul class="sidenav">
-        <li>
-            <div class="user-view">
-                <div class="background"><img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo"></div>
-                <h3>Sobrecrema de Vainilla arroz con leche y glaseado de yema</h3>
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold" href="../index.html" style="letter-spacing: 1px;">HOME</a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="prologo.html">Prólogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="indice.html">Índice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ligeros.html">Ligeros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="segundos_platos.html">Segundos Platos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="guarniciones.html">Guarniciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active aqui" href="postres.html">Los Postres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="otros.html">Otros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.html">Contacto</a>
+                    </li>
+                </ul>
             </div>
-        </li>
-        <li>Elaboración: 35 min / Complejidad: media</li>
-        <li>Temperatura: fría / Porciones: 6</li>
-        <li><div class="divider"></div></li>
-        <li><a class="subheader">Ingredientes</a></li>
-        <li class="left-align">
-            <p><strong>Crema:</strong> 1 taza de leche entera, 3 cdas azúcar, pizca de sal, gotas de vainilla, 3 yemas, 1 cda maicena.</p>
-            <p><strong>Arroz con leche:</strong> 1 taza arroz crudo, 2 tiras piel de limón, 1½ lt agua, 350 ml leche evaporada, 1½ taza azúcar, ½ cdta canela.</p>
-            <p><strong>Glaseado:</strong> 2 yemas de huevo.</p>
-        </li>
-        <li><a class="subheader">Steps</a></li>
-        <li class="left-align">
-            <p><strong>Glaseado:</strong> Precalentar horno 200 ºC, batir yemas, untar sobre arroz con leche y hornear 6 min.</p>
-            <p><strong>Crema:</strong> Hervir leche con azúcar. Batir yemas con maicena diluida y añadir a la leche caliente con vainilla y sal. Reservar.</p>
-            <p><strong>Arroz con leche:</strong> Hervir agua, leche y piel de limón, añadir arroz 15 min a fuego bajo, incorporar azúcar y continuar 10-15 min más. Verter en recipientes y enfriar.</p>
+        </div>
+    </nav>
+
+    <main class="flex-grow-1">
+        <div class="carrusel-v3">
+            <button class="carrusel-prev" aria-label="Receta anterior">‹</button>
+            <div class="carrusel-track">
+                <div class="carrusel-item tam">
+                    <img src="../Imagenes/sobrecrema_vainilla.jpg" alt="Sobrecrema de Vainilla">
+                    <h2>Sobrecrema de Vainilla</h2>
+                    <button class="abrir-slide btn btn-custom" data-target="slide1">Ver receta</button>
+                </div>
+                <div class="carrusel-item">
+                    <img src="../Imagenes/tarta_queso.jpg" alt="Tartar de Queso">
+                    <h2>Tartar de Queso</h2>
+                    <button class="abrir-slide btn btn-custom" data-target="slide2">Ver receta</button>
+                </div>
+                <div class="carrusel-item tam">
+                    <img src="../Imagenes/torrejas.jpg" alt="Torrejas 3 Leches">
+                    <h2>Torrejas a las 3 Leches</h2>
+                    <button class="abrir-slide btn btn-custom" data-target="slide3">Ver receta</button>
+                </div>
+                <div class="carrusel-item">
+                    <img src="../Imagenes/boniatillo.jpg" alt="Boniatillo">
+                    <h2>Boniatillo</h2>
+                    <button class="abrir-slide btn btn-custom" data-target="slide4">Ver receta</button>
+                </div>
+                <div class="carrusel-item tam">
+                    <img src="../Imagenes/magdalena.jpg" alt="Magdalenas de Naranja">
+                    <h2>Magdalenas de Naranja</h2>
+                    <button class="abrir-slide btn btn-custom" data-target="slide5">Ver receta</button>
+                </div>
+            </div>
+            <button class="carrusel-next" aria-label="Siguiente receta">›</button>
+        </div>
+    </main>
+
+    <!-- Slideouts -->
+    <!-- Slide 1 -->
+    <aside id="slide1" class="slideout">
+        <div class="slideout-header">
+            <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
+            <h3 class="slideout-title">Sobrecrema de Vainilla arroz con leche y glaseado de yema</h3>
+        </div>
+
+        <div class="slideout-content">
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">Elaboración: 35 min</span>
+                <span class="badge bg-secondary me-2">Complejidad: media</span>
+            </div>
+            <div class="mb-3">
+                <span class="badge bg-info me-2 text-dark">Temperatura: fría</span>
+                <span class="badge bg-dark">Porciones: 6</span>
+            </div>
+
+            <hr>
+
+            <h4 class="subheader">Ingredientes</h4>
+            <p class="fw-bold text-muted">Crema</p>
+            <ul class="list-unstyled">
+                <li>• 1 taza de leche entera</li>
+                <li>• 3 cucharadas azúcar</li>
+                <li>• Pizca de sal</li>
+                <li>• Gotas de vainilla</li>
+                <li>• 3 yemas</li>
+                <li>• 1 cucharada maicena</li>
+            </ul>
+
+            <p class="fw-bold text-muted mt-3">Arroz con leche</p>
+            <ul class="list-unstyled">
+                <li>• 1 taza arroz crudo</li>
+                <li>• 2 tiras piel de limón</li>
+                <li>• 1½ litro agua</li>
+                <li>• 350 ml leche evaporada</li>
+                <li>• 1½ taza azúcar</li>
+                <li>• ½ cucharadita canela</li>
+            </ul>
+
+            <p class="fw-bold text-muted mt-3">Glaseado</p>
+            <ul class="list-unstyled">
+                <li>• 2 yemas de huevo</li>
+            </ul>
+
+            <h4 class="subheader mt-4">Preparación</h4>
+            <p><strong>Glaseado:</strong> Precalentar horno 200 ºC, batir yemas, untar sobre arroz con leche y hornear 6
+                min.</p>
+            <p><strong>Crema:</strong> Hervir leche con azúcar. Batir yemas con maicena diluida y añadir a la leche
+                caliente con vainilla y sal. Reservar.</p>
+            <p><strong>Arroz con leche:</strong> Hervir agua, leche y piel de limón, añadir arroz 15 min a fuego bajo,
+                incorporar azúcar y continuar 10-15 min más. Verter en recipientes y enfriar.</p>
             <p><strong>Montaje:</strong> Servir arroz sobre crema y espolvorear con canela.</p>
-        </li>
-    </ul>
-    <button class="cerrar-slide">Cerrar</button>
-</aside>
+        </div>
 
-<!-- Slide 2 -->
-<aside id="slide2" class="slideout">
-    <ul class="sidenav">
-        <li>
-            <div class="user-view">
-                <div class="background"><img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo"></div>
-                <h3>Tartar de Queso con confitura de remolacha</h3>
-            </div>
-        </li>
-        <li>Elaboración: 35 min / Complejidad: media</li>
-        <li>Temperatura: fría / Porciones: 12</li>
-        <li><div class="divider"></div></li>
-        <li><a class="subheader">Ingredientes</a></li>
-        <li class="left-align">
-            <p><strong>Confitura:</strong> 350 g remolacha cocida, 140 g azúcar, ½ limón.</p>
-            <p><strong>Tarta de Queso:</strong> 160 g galletas maría, 80 g mantequilla, 460 g queso crema, 125 ml leche condensada, 4 huevos, 1 cdta vinagre, pizca de sal, gotas de vainilla.</p>
-        </li>
-        <li><a class="subheader">Steps</a></li>
-        <li class="left-align">
-            <p><strong>Confitura:</strong> Ablandar remolachas, mezclar con azúcar, añadir limón y cocinar a fuego bajo hasta espesar.</p>
-            <p><strong>Tarta:</strong> Triturar galletas con mantequilla, poner en molde de 22 cm. Batir queso, leche, huevos, vinagre, vainilla y sal, colar y verter en molde. Hornear 150 ºC 25-30 min. Refrescar y cubrir con confitura.</p>
-        </li>
-    </ul>
-    <button class="cerrar-slide">Cerrar</button>
-</aside>
+        <button class="cerrar-slide btn btn-custom w-100">Cerrar</button>
+    </aside>
 
-<!-- Slide 3 -->
-<aside id="slide3" class="slideout">
-    <ul class="sidenav">
-        <li>
-            <div class="user-view">
-                <div class="background"><img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo"></div>
-                <h3>Torrejas a las 3 Leches con helado de Coco</h3>
+    <!-- Slide 2 -->
+    <aside id="slide2" class="slideout">
+        <div class="slideout-header">
+            <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
+            <h3 class="slideout-title">Tartar de Queso con confitura de remolacha</h3>
+        </div>
+
+        <div class="slideout-content">
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">Elaboración: 35 min</span>
+                <span class="badge bg-secondary me-2">Complejidad: media</span>
             </div>
-        </li>
-        <li>Elaboración: 40 min / Complejidad: media</li>
-        <li>Temperatura: fría / Porciones: 4</li>
-        <li><div class="divider"></div></li>
-        <li><a class="subheader">Ingredientes</a></li>
-        <li class="left-align">
-            <p><strong>Helado:</strong> 460 ml helado de vainilla, ¾ taza dulce de coco en almíbar.</p>
-            <p><strong>Torrejas:</strong> 6 rodajas pan de molde, 250 ml leche evaporada, 250 ml leche condensada, 250 ml leche entera, gotas de vainilla, 4 cdas vino seco, ½ cdta sal, 4 huevos, aceite para freír, ¼ taza almíbar, 75 ml licor triple sec.</p>
-        </li>
-        <li><a class="subheader">Steps</a></li>
-        <li class="left-align">
+            <div class="mb-3">
+                <span class="badge bg-info me-2 text-dark">Temperatura: fría</span>
+                <span class="badge bg-dark">Porciones: 12</span>
+            </div>
+
+            <hr>
+
+            <h4 class="subheader">Ingredientes</h4>
+            <p class="fw-bold text-muted">Confitura</p>
+            <ul class="list-unstyled">
+                <li>• 350 g remolacha cocida</li>
+                <li>• 140 g azúcar</li>
+                <li>• ½ limón</li>
+            </ul>
+
+            <p class="fw-bold text-muted mt-3">Tarta de Queso</p>
+            <ul class="list-unstyled">
+                <li>• 160 g galletas maría</li>
+                <li>• 80 g mantequilla</li>
+                <li>• 460 g queso crema</li>
+                <li>• 125 ml leche condensada</li>
+                <li>• 4 huevos</li>
+                <li>• 1 cucharadita vinagre</li>
+                <li>• Pizca de sal</li>
+                <li>• Gotas de vainilla</li>
+            </ul>
+
+            <h4 class="subheader mt-4">Preparación</h4>
+            <p><strong>Confitura:</strong> Ablandar remolachas, mezclar con azúcar, añadir limón y cocinar a fuego bajo
+                hasta espesar.</p>
+            <p><strong>Tarta:</strong> Triturar galletas con mantequilla, poner en molde de 22 cm. Batir queso, leche,
+                huevos, vinagre, vainilla y sal, colar y verter en molde. Hornear 150 ºC 25-30 min. Refrescar y cubrir
+                con confitura.</p>
+        </div>
+
+        <button class="cerrar-slide btn btn-custom w-100">Cerrar</button>
+    </aside>
+
+    <!-- Slide 3 -->
+    <aside id="slide3" class="slideout">
+        <div class="slideout-header">
+            <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
+            <h3 class="slideout-title">Torrejas a las 3 Leches con helado de Coco</h3>
+        </div>
+
+        <div class="slideout-content">
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">Elaboración: 40 min</span>
+                <span class="badge bg-secondary me-2">Complejidad: media</span>
+            </div>
+            <div class="mb-3">
+                <span class="badge bg-info me-2 text-dark">Temperatura: fría</span>
+                <span class="badge bg-dark">Porciones: 4</span>
+            </div>
+
+            <hr>
+
+            <h4 class="subheader">Ingredientes</h4>
+            <p class="fw-bold text-muted">Helado</p>
+            <ul class="list-unstyled">
+                <li>• 460 ml helado de vainilla</li>
+                <li>• ¾ taza dulce de coco en almíbar</li>
+            </ul>
+
+            <p class="fw-bold text-muted mt-3">Torrejas</p>
+            <ul class="list-unstyled">
+                <li>• 6 rodajas pan de molde</li>
+                <li>• 250 ml leche evaporada</li>
+                <li>• 250 ml leche condensada</li>
+                <li>• 250 ml leche entera</li>
+                <li>• Gotas de vainilla</li>
+                <li>• 4 cucharadas vino seco</li>
+                <li>• ½ cucharadita sal</li>
+                <li>• 4 huevos</li>
+                <li>• Aceite para freír</li>
+                <li>• ¼ taza almíbar</li>
+                <li>• 75 ml licor triple sec</li>
+            </ul>
+
+            <h4 class="subheader mt-4">Preparación</h4>
             <p><strong>Helado:</strong> Mezclar helado con dulce de coco y congelar.</p>
-            <p><strong>Torrejas:</strong> Mezclar leches con vino, sal y vainilla, sumergir pan en mezcla, pasar por huevo y freír. Mezclar almíbar con licor y añadir a torrejas. Refrigerar.</p>
+            <p><strong>Torrejas:</strong> Mezclar leches con vino, sal y vainilla, sumergir pan en mezcla, pasar por
+                huevo y freír. Mezclar almíbar con licor y añadir a torrejas. Refrigerar.</p>
             <p><strong>Montaje:</strong> Calentar torreja y servir con helado encima.</p>
-        </li>
-    </ul>
-    <button class="cerrar-slide">Cerrar</button>
-</aside>
+        </div>
 
-<!-- Slide 4 -->
-<aside id="slide4" class="slideout">
-    <ul class="sidenav">
-        <li>
-            <div class="user-view">
-                <div class="background"><img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo"></div>
-                <h3>Boniatillo de Ayer y de Hoy</h3>
-            </div>
-        </li>
-        <li>Elaboración: 35 min / Complejidad: media</li>
-        <li>Temperatura: fría / Porciones: 8</li>
-        <li><div class="divider"></div></li>
-        <li><a class="subheader">Ingredientes</a></li>
-        <li class="left-align">
-            <p>1000 ml guarapo, 1¼ lb boniato, semillas de anís, 3 cdas mantequilla, 125 ml leche, pizca de sal, 4 cdas azúcar lustre, canela al gusto, 1 caña de azúcar.</p>
-        </li>
-        <li><a class="subheader">Steps</a></li>
-        <li class="left-align">
-            <p>Reducir guarapo a ¾ taza, cocinar boniato con anís hasta ablandar, triturar con guarapo, añadir mantequilla y leche. Montar y decorar con canela y azúcar lustre. Servir con caña de azúcar como cucharilla.</p>
-        </li>
-    </ul>
-    <button class="cerrar-slide">Cerrar</button>
-</aside>
+        <button class="cerrar-slide btn btn-custom w-100">Cerrar</button>
+    </aside>
 
-<!-- Slide 5 -->
-<aside id="slide5" class="slideout">
-    <ul class="sidenav">
-        <li>
-            <div class="user-view">
-                <div class="background"><img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo"></div>
-                <h3>Magdalenas de Naranja con glaseado de queso crema</h3>
+    <!-- Slide 4 -->
+    <aside id="slide4" class="slideout">
+        <div class="slideout-header">
+            <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
+            <h3 class="slideout-title">Boniatillo de Ayer y de Hoy</h3>
+        </div>
+
+        <div class="slideout-content">
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">Elaboración: 35 min</span>
+                <span class="badge bg-secondary me-2">Complejidad: media</span>
             </div>
-        </li>
-        <li>Elaboración: 35 min / Complejidad: media</li>
-        <li>Temperatura: fría / Porciones: 25</li>
-        <li><div class="divider"></div></li>
-        <li><a class="subheader">Ingredientes</a></li>
-        <li class="left-align">
-            <p><strong>Magdalenas:</strong> 6 huevos, 1 taza azúcar, 125 g mantequilla, ½ taza leche, 1¼ taza harina, ½ cdta polvo hornear, 4 cdas miel, pizca de sal, ralladura de naranja, 100 g supremas de naranja, 25 moldes.</p>
-            <p><strong>Glaseado:</strong> 125 g mantequilla, 200 g azúcar glas, 50 ml zumo de naranja, 150 g queso crema, ralladura de naranja.</p>
-        </li>
-        <li><a class="subheader">Steps</a></li>
-        <li class="left-align">
-            <p><strong>Magdalenas:</strong> Batir yemas con mantequilla y azúcar, alternar con harina y leche. Montar claras a nieve e incorporar. Hornear 15-20 min a 200 ºC.</p>
+            <div class="mb-3">
+                <span class="badge bg-info me-2 text-dark">Temperatura: fría</span>
+                <span class="badge bg-dark">Porciones: 8</span>
+            </div>
+
+            <hr>
+
+            <h4 class="subheader">Ingredientes</h4>
+            <ul class="list-unstyled">
+                <li>• 1000 ml guarapo</li>
+                <li>• 1¼ lb boniato</li>
+                <li>• Semillas de anís</li>
+                <li>• 3 cucharadas mantequilla</li>
+                <li>• 125 ml leche</li>
+                <li>• Pizca de sal</li>
+                <li>• 4 cucharadas azúcar lustre</li>
+                <li>• Canela al gusto</li>
+                <li>• 1 caña de azúcar</li>
+            </ul>
+
+            <h4 class="subheader mt-4">Preparación</h4>
+            <p>Reducir guarapo a ¾ taza, cocinar boniato con anís hasta ablandar, triturar con guarapo, añadir
+                mantequilla y leche. Montar y decorar con canela y azúcar lustre. Servir con caña de azúcar como
+                cucharilla.</p>
+        </div>
+
+        <button class="cerrar-slide btn btn-custom w-100">Cerrar</button>
+    </aside>
+
+    <!-- Slide 5 -->
+    <aside id="slide5" class="slideout">
+        <div class="slideout-header">
+            <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
+            <h3 class="slideout-title">Magdalenas de Naranja con glaseado de queso crema</h3>
+        </div>
+
+        <div class="slideout-content">
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">Elaboración: 35 min</span>
+                <span class="badge bg-secondary me-2">Complejidad: media</span>
+            </div>
+            <div class="mb-3">
+                <span class="badge bg-info me-2 text-dark">Temperatura: fría</span>
+                <span class="badge bg-dark">Porciones: 25</span>
+            </div>
+
+            <hr>
+
+            <h4 class="subheader">Ingredientes</h4>
+            <p class="fw-bold text-muted">Magdalenas</p>
+            <ul class="list-unstyled">
+                <li>• 6 huevos</li>
+                <li>• 1 taza azúcar</li>
+                <li>• 125 g mantequilla</li>
+                <li>• ½ taza leche</li>
+                <li>• 1¼ taza harina</li>
+                <li>• ½ cucharadita polvo hornear</li>
+                <li>• 4 cucharadas miel</li>
+                <li>• Pizca de sal</li>
+                <li>• Ralladura de naranja</li>
+                <li>• 100 g supremas de naranja</li>
+                <li>• 25 moldes</li>
+            </ul>
+
+            <p class="fw-bold text-muted mt-3">Glaseado</p>
+            <ul class="list-unstyled">
+                <li>• 125 g mantequilla</li>
+                <li>• 200 g azúcar glas</li>
+                <li>• 50 ml zumo de naranja</li>
+                <li>• 150 g queso crema</li>
+                <li>• Ralladura de naranja</li>
+            </ul>
+
+            <h4 class="subheader mt-4">Preparación</h4>
+            <p><strong>Magdalenas:</strong> Batir yemas con mantequilla y azúcar, alternar con harina y leche. Montar
+                claras a nieve e incorporar. Hornear 15-20 min a 200 ºC.</p>
             <p><strong>Glaseado:</strong> Mezclar mantequilla con azúcar, incorporar queso crema, zumo y ralladura.</p>
             <p><strong>Montaje:</strong> Untar glaseado sobre magdalenas.</p>
-        </li>
-    </ul>
-    <button class="cerrar-slide">Cerrar</button>
-</aside>
+        </div>
 
-<div class="slideout-overlay"></div>
+        <button class="cerrar-slide btn btn-custom w-100">Cerrar</button>
+    </aside>
 
-    <footer>
-        <span>By <span class="red">LMTRX</span></span>
+    <!-- Overlay -->
+    <div class="slideout-overlay"></div>
+
+    <footer class="py-4 text-center mt-5">
+        <div class="footer-marquee overflow-hidden">
+            <p class="mb-0">
+                By <span class="red fw-bold">LMTRX</span>
+            </p>
+        </div>
     </footer>
 
-<script src="../js/menu.js"></script>
-<script src="../js/carrusel.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript Personalizado -->
+    <script src="../js/carrusel.js"></script>
 </body>
+
 </html>

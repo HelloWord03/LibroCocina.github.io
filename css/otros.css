@@ -1,0 +1,107 @@
+/* Tablas personalizadas */
+.tabla-coccion,
+.tabla-equivalencia {
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tabla-coccion thead,
+.tabla-equivalencia caption {
+    letter-spacing: 0.5px;
+}
+
+/* Hover mejorado para filas de tabla */
+.tabla-coccion tbody tr:hover,
+.tabla-equivalencia tbody tr:hover {
+    background-color: var(--gris-oscuro) !important;
+    transition: background-color 0.3s ease;
+}
+
+/* Notas informativas */
+.nota {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Lista de conservación */
+.conservacion-lista {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+}
+
+.conservacion-lista li {
+    line-height: 1.8;
+}
+
+/* Glosario */
+.glosario dt {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--acento);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--acento);
+    padding-bottom: 0.5rem;
+}
+
+.glosario dd {
+    margin-left: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.glosario dd p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+.glosario dd strong {
+    color: var(--texto);
+    font-weight: 600;
+}
+
+/* Títulos de sección */
+section h3,
+section h4 {
+    color: var(--texto);
+    font-weight: 600;
+}
+
+/* Caption de tablas */
+caption {
+    border-radius: 8px 8px 0 0;
+    font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .glosario dt {
+        font-size: 1.3rem;
+    }
+    
+    .glosario dd {
+        margin-left: 0.5rem;
+    }
+    
+    .nota {
+        font-size: 0.85rem;
+    }
+    
+    caption {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .glosario dt {
+        font-size: 1.2rem;
+    }
+    
+    .nota {
+        font-size: 0.8rem;
+    }
+    
+    table {
+        font-size: 0.85rem;
+    }
+}

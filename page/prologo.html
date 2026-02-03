@@ -9,90 +9,125 @@
     <meta name="date" content="2025-11-1">
     <meta name="last-modified" content="2025-11-15">
     <title>Prólogo</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS Personalizado -->
     <link rel="stylesheet" href="../css/estilo_base.css">
     <link rel="stylesheet" href="../css/estilo_prologo.css">
-    <link rel="stylesheet" href="../css/estilo_menu.css">
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:500,600&display=swap">
+    
     <!-- favicon -->
-	<link rel="shortcut icon" type="image/png" href="../Imagenes/icon.png">
-
+    <link rel="shortcut icon" type="image/png" href="../Imagenes/icon.png">
 </head>
 
-<body>
+<body data-theme="default">
     <a href="#prologo" class="skip-link">Saltar al contenido</a>
-    <header>
-        <h1>Prólogo</h1>
-        <nav class="navbar">
-            <div class="nav-logo">
-                <a href="../index.html">HOME</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="prologo.html" class="aqui">Prólogo</a></li>
-                <li><a href="indice.html">Índice</a></li>
-                <li><a href="ligeros.html">Ligeros</a></li>
-                <li><a href="segundos_platos.html">Segundos Platos</a></li>
-                <li><a href="guarniciones.html">Guarniciones</a></li>
-                <li><a href="postres.html">Los Postres</a></li>
-                <li><a href="otros.html">Otros</a></li>
-                <li><a href="formulario.html">Contacto</a></li>
-            </ul>
-            <!--Contenedor hamburguesa-->
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+    
+    <header class="text-center py-5">
+        <h1 class="display-4 fw-semibold">Prólogo</h1>
     </header>
 
-    <main>
-        <article id="prologo" class="page-container">
-            <h2>La magia de un cocinero cubano</h2>
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold" href="../index.html" style="letter-spacing: 1px;">HOME</a>
+            
+            <button class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" 
+                    aria-expanded="false" 
+                    aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active aqui" href="prologo.html">Prólogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="indice.html">Índice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ligeros.html">Ligeros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="segundos_platos.html">Segundos Platos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="guarniciones.html">Guarniciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="postres.html">Los Postres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="otros.html">Otros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-            <p>
-                El que estas notas escribe confiesa que en su vida solo ha entrado a la cocina a probar bocado
-                o fregar la vajilla. Nada más. Por eso soy esclavo de los que bien cocinan. Sin embargo, gracias
-                al arte mágico de esos seres privilegiados, soy feliz al disfrutar a diario de uno de los milagros
-                humanos más misteriosos y aún desconocidos para muchos: la cocina cubana.
-            </p>
+    <main class="flex-grow-1 py-5">
+        <div class="container">
+            <article id="prologo" class="page-container">
+                <h2 class="text-center mb-4">La magia de un cocinero cubano</h2>
 
-            <p>
-                Es en mi condición de ferviente amante del buen comer que me atrevo a opinar de <strong>La Magia de
+                <p>
+                    El que estas notas escribe confiesa que en su vida solo ha entrado a la cocina a probar bocado
+                    o fregar la vajilla. Nada más. Por eso soy esclavo de los que bien cocinan. Sin embargo, gracias
+                    al arte mágico de esos seres privilegiados, soy feliz al disfrutar a diario de uno de los milagros
+                    humanos más misteriosos y aún desconocidos para muchos: la cocina cubana.
+                </p>
+
+                <p>
+                    Es en mi condición de ferviente amante del buen comer que me atrevo a opinar de <strong>La Magia de
                     un cocinero cubano</strong>, obra primigenia del cubano L. A. Gallego, joven y experimentado chef de
-                cocina internacional, por cuyas venas fluye la savia culinaria heredada de los bisabuelos Ma
-                Francisca, hija legítima de África negra, única y diversa, y Don Gallego, nacido en la España de
-                mil culturas; unidos bajo el ardiente sol del Caribe insular, forja de la tradición culinaria cubana.
-            </p>
+                    cocina internacional, por cuyas venas fluye la savia culinaria heredada de los bisabuelos Ma
+                    Francisca, hija legítima de África negra, única y diversa, y Don Gallego, nacido en la España de
+                    mil culturas; unidos bajo el ardiente sol del Caribe insular, forja de la tradición culinaria cubana.
+                </p>
 
-            <p>
-                Pero <strong>La Magia de un cocinero cubano</strong> es mucho más que mezcla de culturas, es un libro de
-                cocina
-                que rezuma tradición y modernidad en cada letra e imagen que lo conforma.
-            </p>
+                <p>
+                    Pero <strong>La Magia de un cocinero cubano</strong> es mucho más que mezcla de culturas, es un libro de
+                    cocina que rezuma tradición y modernidad en cada letra e imagen que lo conforma.
+                </p>
 
-            <p>
-                Y si eso no fuera suficiente, es tradicional por la gracia popular presente en los nombres
-                cubanísimos de sus platillos, la combinación infinita de colores de sus presentaciones y, sobre
-                todo, por el desprendimiento generoso de conocimientos del autor, demostración de absoluta
-                confianza y seguridad en sí mismo.
-            </p>
+                <p>
+                    Y si eso no fuera suficiente, es tradicional por la gracia popular presente en los nombres
+                    cubanísimos de sus platillos, la combinación infinita de colores de sus presentaciones y, sobre
+                    todo, por el desprendimiento generoso de conocimientos del autor, demostración de absoluta
+                    confianza y seguridad en sí mismo.
+                </p>
 
-            <p>
-                En cambio, es modernidad por su intención de contribuir a la salud de sus coterráneos,
-                ayudándonos a superar la dieta poco variada que incluye un número reducido de alimentos
-                y preparaciones culinarias. Como prueba de que la cocina es arte para la creatividad infinita, el
-                chef Gallego deja abierta la opción de mejorar sus recetas con el toque personal de cada
-                cocinero y comensal.
-            </p>
-        </article>
+                <p>
+                    En cambio, es modernidad por su intención de contribuir a la salud de sus coterráneos,
+                    ayudándonos a superar la dieta poco variada que incluye un número reducido de alimentos
+                    y preparaciones culinarias. Como prueba de que la cocina es arte para la creatividad infinita, el
+                    chef Gallego deja abierta la opción de mejorar sus recetas con el toque personal de cada
+                    cocinero y comensal.
+                </p>
+            </article>
+        </div>
     </main>
 
-    <footer>
-        <span>By <span class="red">LMTRX</span></span>
+    <footer class="py-4 text-center mt-5">
+        <div class="footer-marquee overflow-hidden">
+            <p class="mb-0">
+                By <span class="red fw-bold">LMTRX</span>
+            </p>
+        </div>
     </footer>
-    <script src="../js/menu.js"></script>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 
 </html>

@@ -1,145 +1,260 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="Ariannet Alvarez">
-<meta name="school" content="CIFP Ciudad Jardín">
-<meta name="date" content="2025-11-1">
-<meta name="last-modified" content="2025-11-15">
-<title>Contacto - Encuesta</title>
-<link rel="stylesheet" href="../css/estilo_base.css">
-<link rel="stylesheet" href="../css/estilo_menu.css">
-<link rel="stylesheet" href="../css/formulario.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ariannet Alvarez">
+    <meta name="school" content="CIFP Ciudad Jardín">
+    <meta name="date" content="2025-11-1">
+    <meta name="last-modified" content="2025-11-15">
+    <title>Contacto - Encuesta</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="../css/estilo_base.css">
+    <link rel="stylesheet" href="../css/formulario.css">
 
-<!-- Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:500,600&display=swap">
-<!-- favicon -->
-	<link rel="shortcut icon" type="image/png" href="../Imagenes/icon.png">
+    <!-- favicon -->
+    <link rel="shortcut icon" type="image/png" href="../Imagenes/icon.png">
 </head>
-<body>
+<body data-theme="default">
 
-<header>
-  <h1>Contacto y Encuesta</h1>
-  <nav class="navbar">
-    <div class="nav-logo">
-      <a href="../index.html">HOME</a>
-    </div>
-    <ul class="nav-links">
-      <li><a href="prologo.html">Prólogo</a></li>
-      <li><a href="indice.html">Índice</a></li>
-      <li><a href="ligeros.html">Ligeros</a></li>
-      <li><a href="segundos_platos.html">Segundos Platos</a></li>
-      <li><a href="guarniciones.html">Guarniciones</a></li>
-      <li><a href="postres.html">Los Postres</a></li>
-      <li><a href="otros.html">Otros</a></li>
-      <li><a href="formulario.html" class="aqui">Contacto</a></li>
-    </ul>
-    <div class="nav-toggle" id="navToggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
-</header>
+    <header class="text-center py-5">
+        <h1 class="display-4 fw-semibold">Contacto y Encuesta</h1>
+    </header>
 
-<main>
-  <section class="form-container">
-    <h2 class="center-align">Encuesta</h2>
-    <form action="#" method="post" enctype="text/plain">
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold" href="../index.html" style="letter-spacing: 1px;">HOME</a>
+            
+            <button class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" 
+                    aria-expanded="false" 
+                    aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="prologo.html">Prólogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="indice.html">Índice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ligeros.html">Ligeros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="segundos_platos.html">Segundos Platos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="guarniciones.html">Guarniciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="postres.html">Los Postres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="otros.html">Otros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active aqui" href="formulario.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-      <fieldset class="form-fieldset">
-        <legend>Datos Personales</legend>
-        <label for="nombre">Nombre*</label>
-        <input type="text" id="nombre" name="nombre" placeholder="--Ingresa tu Nombre--" maxlength="30" required>
+    <main class="flex-grow-1 py-5">
+        <div class="container">
+            <section class="form-container mx-auto p-4 p-md-5 shadow rounded">
+                <h2 class="text-center mb-4">Encuesta</h2>
+                <form action="#" method="post" enctype="text/plain">
 
-        <label for="apellidos">Apellidos*</label>
-        <input type="text" id="apellidos" name="apellidos" placeholder="--Ingresa tus Apellidos--" maxlength="80" required>
+                    <fieldset class="border rounded p-4 mb-4">
+                        <legend class="float-none w-auto px-3 fs-5 fw-semibold">Datos Personales</legend>
+                        
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre*</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" 
+                                   placeholder="--Ingresa tu Nombre--" maxlength="30" required>
+                        </div>
 
-        <label for="email">Email*</label>
-        <input type="email" id="email" name="email" placeholder="--Ingresa tu Email--" maxlength="80" required>
+                        <div class="mb-3">
+                            <label for="apellidos" class="form-label">Apellidos*</label>
+                            <input type="text" class="form-control" id="apellidos" name="apellidos" 
+                                   placeholder="--Ingresa tus Apellidos--" maxlength="80" required>
+                        </div>
 
-        <label for="edad">Edad*</label>
-        <input type="number" id="edad" name="edad" placeholder="--Ingresa tu edad--" required>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email*</label>
+                            <input type="email" class="form-control" id="email" name="email" 
+                                   placeholder="--Ingresa tu Email--" maxlength="80" required>
+                        </div>
 
-        <label for="tlf">Teléfono</label>
-        <input type="tel" id="tlf" name="tlf" placeholder="--Ingresa tu Teléfono--" pattern="[0-9]{9}" maxlength="9">
+                        <div class="mb-3">
+                            <label for="edad" class="form-label">Edad*</label>
+                            <input type="number" class="form-control" id="edad" name="edad" 
+                                   placeholder="--Ingresa tu edad--" required>
+                        </div>
 
-        <label for="genero">Género*</label>
-        <select id="genero" name="genero" required>
-          <option value="" disabled selected>-- Selecciona una opción --</option>
-          <option value="femenino">Femenino</option>
-          <option value="masculino">Masculino</option>
-          <option value="otro">Otro</option>
-        </select>
-      </fieldset>
+                        <div class="mb-3">
+                            <label for="tlf" class="form-label">Teléfono</label>
+                            <input type="tel" class="form-control" id="tlf" name="tlf" 
+                                   placeholder="--Ingresa tu Teléfono--" pattern="[0-9]{9}" maxlength="9">
+                        </div>
 
-      <fieldset class="form-fieldset">
-        <legend>Datos Encuesta</legend>
+                        <div class="mb-3">
+                            <label for="genero" class="form-label">Género*</label>
+                            <select class="form-select" id="genero" name="genero" required>
+                                <option value="" disabled selected>-- Selecciona una opción --</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                    </fieldset>
 
-        <p>¿Cuál es tu ocupación?</p>
-        <label><input type="radio" name="ocup" value="am@_casa" checked> Am@ de casa</label>
-        <label><input type="radio" name="ocup" value="trabajador"> Trabajador@</label>
-        <label><input type="radio" name="ocup" value="estudiante"> Estudiante</label>
-        <label><input type="radio" name="ocup" value="profesional"> Profesional del sector</label>
-        <label><input type="radio" name="ocup" value="ninguna"> Ninguna de las anteriores</label>
+                    <fieldset class="border rounded p-4 mb-4">
+                        <legend class="float-none w-auto px-3 fs-5 fw-semibold">Datos Encuesta</legend>
 
-        <p>¿Conocías este libro?</p>
-        <label><input type="radio" name="verificado" value="nunca_visto"> Lo conocía pero nunca lo había visto</label>
-        <label><input type="radio" name="verificado" value="si" checked> Sí</label>
-        <label><input type="radio" name="verificado" value="no"> No</label>
+                        <div class="mb-3">
+                            <p class="fw-semibold">¿Cuál es tu ocupación?</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ocup" id="ocup1" value="am@_casa" checked>
+                                <label class="form-check-label" for="ocup1">Am@ de casa</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ocup" id="ocup2" value="trabajador">
+                                <label class="form-check-label" for="ocup2">Trabajador@</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ocup" id="ocup3" value="estudiante">
+                                <label class="form-check-label" for="ocup3">Estudiante</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ocup" id="ocup4" value="profesional">
+                                <label class="form-check-label" for="ocup4">Profesional del sector</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="ocup" id="ocup5" value="ninguna">
+                                <label class="form-check-label" for="ocup5">Ninguna de las anteriores</label>
+                            </div>
+                        </div>
 
-        <p>¿Cómo llegaste a nosotros?</p>
-        <label><input type="checkbox" name="direccion" value="tiktok"> TikTok</label>
-        <label><input type="checkbox" name="direccion" value="autor"> Autor</label>
-        <label><input type="checkbox" name="direccion" value="google_buscador"> Google buscador</label>
+                        <div class="mb-3">
+                            <p class="fw-semibold">¿Conocías este libro?</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="verificado" id="verif1" value="nunca_visto">
+                                <label class="form-check-label" for="verif1">Lo conocía pero nunca lo había visto</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="verificado" id="verif2" value="si" checked>
+                                <label class="form-check-label" for="verif2">Sí</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="verificado" id="verif3" value="no">
+                                <label class="form-check-label" for="verif3">No</label>
+                            </div>
+                        </div>
 
-        <label for="seccion">¿Qué sección te gustó más?</label>
-        <select id="seccion" name="seccion" required>
-          <option value="" disabled selected>-- Selecciona opción aquí --</option>
-          <option value="postres">Postres</option>
-          <option value="segundos">Segundos Platos</option>
-          <option value="ligeros">Ligeros, sopas y cremas</option>
-          <option value="guarniciones">Guarniciones</option>
-          <option value="nada">Ninguna de las anteriores</option>
-        </select>
+                        <div class="mb-3">
+                            <p class="fw-semibold">¿Cómo llegaste a nosotros?</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="direccion" id="dir1" value="tiktok">
+                                <label class="form-check-label" for="dir1">TikTok</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="direccion" id="dir2" value="autor">
+                                <label class="form-check-label" for="dir2">Autor</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" name="direccion" id="dir3" value="google_buscador">
+                                <label class="form-check-label" for="dir3">Google buscador</label>
+                            </div>
+                        </div>
 
-        <label for="rating">¿Cómo calificarías este libro de 1 a 5?</label>
-        <select id="rating" name="rating" required>
-          <option value="" disabled selected>-- Selecciona calificación aquí --</option>
-          <option value="1">Una estrella</option>
-          <option value="2">Dos estrellas</option>
-          <option value="3">Tres estrellas</option>
-          <option value="4">Cuatro estrellas</option>
-          <option value="5">Cinco estrellas</option>
-        </select>
+                        <div class="mb-3">
+                            <label for="seccion" class="form-label">¿Qué sección te gustó más?</label>
+                            <select class="form-select" id="seccion" name="seccion" required>
+                                <option value="" disabled selected>-- Selecciona opción aquí --</option>
+                                <option value="postres">Postres</option>
+                                <option value="segundos">Segundos Platos</option>
+                                <option value="ligeros">Ligeros, sopas y cremas</option>
+                                <option value="guarniciones">Guarniciones</option>
+                                <option value="nada">Ninguna de las anteriores</option>
+                            </select>
+                        </div>
 
-        <p>¿Nos recomendarías con tus conocidos?</p>
-        <label><input type="radio" name="recomendacion" value="por_supuesto" checked> Sí</label>
-        <label><input type="radio" name="recomendacion" value="talvez"> Tal vez</label>
-        <label><input type="radio" name="recomendacion" value="nunca"> Nunca</label>
+                        <div class="mb-3">
+                            <label for="rating" class="form-label">¿Cómo calificarías este libro de 1 a 5?</label>
+                            <select class="form-select" id="rating" name="rating" required>
+                                <option value="" disabled selected>-- Selecciona calificación aquí --</option>
+                                <option value="1">Una estrella</option>
+                                <option value="2">Dos estrellas</option>
+                                <option value="3">Tres estrellas</option>
+                                <option value="4">Cuatro estrellas</option>
+                                <option value="5">Cinco estrellas</option>
+                            </select>
+                        </div>
 
-        <label for="comentario">Comentario adicional</label>
-        <textarea id="comentario" name="comentario" rows="5" placeholder="Añade un comentario con tu receta favorita..."></textarea>
+                        <div class="mb-3">
+                            <p class="fw-semibold">¿Nos recomendarías con tus conocidos?</p>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="recomendacion" id="rec1" value="por_supuesto" checked>
+                                <label class="form-check-label" for="rec1">Sí</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="recomendacion" id="rec2" value="talvez">
+                                <label class="form-check-label" for="rec2">Tal vez</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="recomendacion" id="rec3" value="nunca">
+                                <label class="form-check-label" for="rec3">Nunca</label>
+                            </div>
+                        </div>
 
-        <label><input type="checkbox" name="publ" value="publicidad" checked> ¿Quieres recibir más encuestas y publicidad como esta?</label>
+                        <div class="mb-3">
+                            <label for="comentario" class="form-label">Comentario adicional</label>
+                            <textarea class="form-control" id="comentario" name="comentario" rows="5" 
+                                      placeholder="Añade un comentario con tu receta favorita..."></textarea>
+                        </div>
 
-      </fieldset>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" name="publ" id="publ" value="publicidad" checked>
+                            <label class="form-check-label" for="publ">
+                                ¿Quieres recibir más encuestas y publicidad como esta?
+                            </label>
+                        </div>
 
-      <div class="form-buttons">
-        <button type="submit" class="btn">Enviar</button>
-        <button type="reset" class="btn">Restablecer</button>
-      </div>
+                    </fieldset>
 
-    </form>
-  </section>
-</main>
+                    <div class="d-flex justify-content-between gap-3">
+                        <button type="submit" class="btn btn-custom px-4 py-2 flex-grow-1">Enviar</button>
+                        <button type="reset" class="btn btn-secondary px-4 py-2 flex-grow-1">Restablecer</button>
+                    </div>
 
-<footer>
-    <span>By <span class="red">LMTRX</span></span>
-</footer>
+                </form>
+            </section>
+        </div>
+    </main>
 
-<script src="../js/menu.js"></script>
+    <footer class="py-4 text-center mt-5">
+        <div class="footer-marquee overflow-hidden">
+            <p class="mb-0">
+                By <span class="red fw-bold">LMTRX</span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
 </body>
 </html>

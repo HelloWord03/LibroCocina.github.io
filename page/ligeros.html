@@ -9,308 +9,319 @@
     <meta name="date" content="2025-11-1">
     <meta name="last-modified" content="2025-11-15">
     <title>Ligeros, Sopas y Cremas</title>
-    <link rel="stylesheet" href="../css/carrusel.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- CSS Personalizado -->
     <link rel="stylesheet" href="../css/estilo_base.css">
-    <link rel="stylesheet" href="../css/estilo_menu.css">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:500,600&display=swap">
+    <link rel="stylesheet" href="../css/carrusel.css">
+    
     <!-- favicon -->
     <link rel="shortcut icon" type="image/png" href="../Imagenes/icon.png">
 </head>
 
-<body>
+<body data-theme="default">
 
-    <header>
-        <h1>Ligeros, Sopas y Cremas</h1>
-        <nav class="navbar">
-            <div class="nav-logo">
-                <a href="../index.html">HOME</a>
-            </div>
-            <ul class="nav-links">
-                <li><a href="prologo.html">Prólogo</a></li>
-                <li><a href="indice.html">Índice</a></li>
-                <li><a href="ligeros.html" class="aqui">Ligeros</a></li>
-                <li><a href="segundos_platos.html">Segundos Platos</a></li>
-                <li><a href="guarniciones.html">Guarniciones</a></li>
-                <li><a href="postres.html">Los Postres</a></li>
-                <li><a href="otros.html">Otros</a></li>
-                <li><a href="formulario.html">Contacto</a></li>
-            </ul>
-            <!--Contenedor hamburguesa-->
-            <div class="nav-toggle" id="navToggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
+    <header class="text-center py-5">
+        <h1 class="display-4 fw-semibold">Ligeros, Sopas y Cremas</h1>
     </header>
 
-    <main>
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold" href="../index.html" style="letter-spacing: 1px;">HOME</a>
+            
+            <button class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#navbarNav" 
+                    aria-controls="navbarNav" 
+                    aria-expanded="false" 
+                    aria-label="Abrir menú de navegación">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="prologo.html">Prólogo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="indice.html">Índice</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active aqui" href="ligeros.html">Ligeros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="segundos_platos.html">Segundos Platos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="guarniciones.html">Guarniciones</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="postres.html">Los Postres</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="otros.html">Otros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="formulario.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow-1">
         <div class="carrusel-v3">
-            <button class="carrusel-prev">‹</button>
+            <button class="carrusel-prev" aria-label="Receta anterior">‹</button>
             <div class="carrusel-track">
                 <div class="carrusel-item">
                     <img src="../Imagenes/seviche_mojito.jpg" alt="Seviche Mojito">
                     <h2>Seviche Mojito</h2>
-                    <button class="abrir-slide" data-target="slide1">Ver receta</button>
+                    <button class="abrir-slide btn btn-custom" data-target="slide1">Ver receta</button>
                 </div>
                 <div class="carrusel-item">
                     <img src="../Imagenes/caldo_pescador.png" alt="Caldo Pescador">
                     <h2>Caldo Pescador</h2>
-                    <button class="abrir-slide" data-target="slide2">Ver receta</button>
+                    <button class="abrir-slide btn btn-custom" data-target="slide2">Ver receta</button>
                 </div>
                 <div class="carrusel-item">
                     <img src="../Imagenes/volván_atún.jpg" alt="Volován Atún">
                     <h2>Volován con Atún</h2>
-                    <button class="abrir-slide" data-target="slide3">Ver receta</button>
+                    <button class="abrir-slide btn btn-custom" data-target="slide3">Ver receta</button>
                 </div>
                 <div class="carrusel-item">
                     <img src="../Imagenes/tartar_aguacate.jpg" alt="Tartar Aguacate">
                     <h2>Tartar de Aguacate</h2>
-                    <button class="abrir-slide" data-target="slide4">Ver receta</button>
+                    <button class="abrir-slide btn btn-custom" data-target="slide4">Ver receta</button>
                 </div>
                 <div class="carrusel-item">
                     <img src="../Imagenes/cazuelita.jpg" alt="Cazuelita">
                     <h2>Cazuelita de Cobo</h2>
-                    <button class="abrir-slide" data-target="slide5">Ver receta</button>
+                    <button class="abrir-slide btn btn-custom" data-target="slide5">Ver receta</button>
                 </div>
             </div>
-            <button class="carrusel-next">›</button>
+            <button class="carrusel-next" aria-label="Siguiente receta">›</button>
         </div>
     </main>
 
     <!-- Slideouts -->
     <!-- Slide 1 -->
     <aside id="slide1" class="slideout">
-        <ul class="sidenav">
-            <li>
-                <div class="user-view">
-                    <div class="background">
-                        <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
-                    </div>
-                    <h3>Seviche Mojito</h3>
-                </div>
-            </li>
-            <li>Elaboración: 5 min / Complejidad: baja</li>
-            <li>Temperatura: fría / Porciones: 4</li>
-            <li>
-                <div class="divider"></div>
-            </li>
-            <li><a class="subheader">Ingredientes</a></li>
-            <li class="left-align">
-                <div>
-                    <p>300 g filete de pescado de masa blanca (pez perro o pargo)</p>
-                    <p>4 ramitas de hierba buena</p>
-                    <p>1 cucharada de azúcar</p>
-                    <p>80 ml Ron Havana Club 3 Años</p>
-                    <p>6 gotas de Amargo de Angostura</p>
-                    <p>Sal y pimienta recién molida al gusto</p>
-                    <p>¼ taza de zumo de limón</p>
-                    <p>2 cucharadas de aceite de oliva</p>
-                </div>
-            </li>
-            <li><a class="subheader">Steps</a></li>
-            <li class="left-align">
-                <div>
-                    <p>Cortar el pescado en julianas finas.
-                        Majar las ramitas de hierba buena con
-                        el azúcar, agregar el ron y la Angostura.
-                        Mezclar con el pescado y añadir el zumo
-                        de limón, la sal, la pimienta, el aceite de
-                        oliva y servir.</p>
-                </div>
-            </li>
-        </ul>
-        <button class="cerrar-slide">Cerrar</button>
+        <div class="slideout-header">
+            <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
+            <h3 class="slideout-title">Seviche Mojito</h3>
+        </div>
+        
+        <div class="slideout-content">
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">Elaboración: 5 min</span>
+                <span class="badge bg-secondary me-2">Complejidad: baja</span>
+            </div>
+            <div class="mb-3">
+                <span class="badge bg-info me-2 text-dark">Temperatura: fría</span>
+                <span class="badge bg-dark">Porciones: 4</span>
+            </div>
+            
+            <hr>
+            
+            <h4 class="subheader">Ingredientes</h4>
+            <ul class="list-unstyled">
+                <li>• 300 g filete de pescado de masa blanca (pez perro o pargo)</li>
+                <li>• 4 ramitas de hierba buena</li>
+                <li>• 1 cucharada de azúcar</li>
+                <li>• 80 ml Ron Havana Club 3 Años</li>
+                <li>• 6 gotas de Amargo de Angostura</li>
+                <li>• Sal y pimienta recién molida al gusto</li>
+                <li>• ¼ taza de zumo de limón</li>
+                <li>• 2 cucharadas de aceite de oliva</li>
+            </ul>
+            
+            <h4 class="subheader mt-4">Preparación</h4>
+            <p>Cortar el pescado en julianas finas. Majar las ramitas de hierba buena con el azúcar, agregar el ron y la Angostura. Mezclar con el pescado y añadir el zumo de limón, la sal, la pimienta, el aceite de oliva y servir.</p>
+        </div>
+        
+        <button class="cerrar-slide btn btn-custom w-100">Cerrar</button>
     </aside>
 
     <!-- Slide 2 -->
     <aside id="slide2" class="slideout">
-        <ul id="slide-out2" class="sidenav">
-            <li>
-                <div class="user-view">
-                    <div class="background">
-                        <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
-                    </div>
-                    <h3>Caldo del Pescador</h3>
-                </div>
-            </li>
-            <li>Elaboración: 12 min / Complejidad: fácil</li>
-            <li>Temperatura: caliente / Porciones: 4</li>
-            <li>
-                <div class="divider"></div>
-            </li>
-            <li><a class="subheader">Ingredientes</a></li>
-            <li class="left-align">
-                <div>
-                    <p><strong style="color: dimgrey;">Caldo</strong></p>
-                    <p>1 litro de fumet de pescado</p>
-                    <p>50 g masa pescado</p>
-                    <p>50 g camarón</p>
-                    <p>50 g calamar cocido</p>
-                    <p>4 almejas</p>
-                    <p>2 zanahorias pequeñas</p>
-                    <p>1 tomate</p>
-                    <p> 100 ml de vino blanco</p>
-                    <p>Sal y pimienta al gusto</p>
-                </div>
-            </li>
-            <li class="left-align">
-                <div>
-                    <p><strong style="color: dimgrey;">Decoración</strong></p>
-                    <p>4 de rodajas de pan blanco (opcional)</p>
-                    <p>2 ramitas de perejil</p>
-
-                </div>
-            </li>
-            <li><a class="subheader">Steps</a></li>
-            <li class="left-align">
-                <div>
-                    <p>Poner el fumet en una cazuela a fuego medio. Retirar el pedúnculo del tomate, trinchar las
-                        supremas y agregarlas a la cazuela
-                        junto a los demás ingredientes. Cocer por
-                        diez minutos a fuego bajo. Servir, decorar
-                        con las hojas de perejil y acompañar con el
-                        pan.</p>
-                </div>
-            </li>
-        </ul>
-        <button class="cerrar-slide">Cerrar</button>
+        <div class="slideout-header">
+            <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
+            <h3 class="slideout-title">Caldo del Pescador</h3>
+        </div>
+        
+        <div class="slideout-content">
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">Elaboración: 12 min</span>
+                <span class="badge bg-secondary me-2">Complejidad: fácil</span>
+            </div>
+            <div class="mb-3">
+                <span class="badge bg-danger me-2">Temperatura: caliente</span>
+                <span class="badge bg-dark">Porciones: 4</span>
+            </div>
+            
+            <hr>
+            
+            <h4 class="subheader">Ingredientes</h4>
+            <p class="fw-bold text-muted">Caldo</p>
+            <ul class="list-unstyled">
+                <li>• 1 litro de fumet de pescado</li>
+                <li>• 50 g masa pescado</li>
+                <li>• 50 g camarón</li>
+                <li>• 50 g calamar cocido</li>
+                <li>• 4 almejas</li>
+                <li>• 2 zanahorias pequeñas</li>
+                <li>• 1 tomate</li>
+                <li>• 100 ml de vino blanco</li>
+                <li>• Sal y pimienta al gusto</li>
+            </ul>
+            
+            <p class="fw-bold text-muted mt-3">Decoración</p>
+            <ul class="list-unstyled">
+                <li>• 4 de rodajas de pan blanco (opcional)</li>
+                <li>• 2 ramitas de perejil</li>
+            </ul>
+            
+            <h4 class="subheader mt-4">Preparación</h4>
+            <p>Poner el fumet en una cazuela a fuego medio. Retirar el pedúnculo del tomate, trinchar las supremas y agregarlas a la cazuela junto a los demás ingredientes. Cocer por diez minutos a fuego bajo. Servir, decorar con las hojas de perejil y acompañar con el pan.</p>
+        </div>
+        
+        <button class="cerrar-slide btn btn-custom w-100">Cerrar</button>
     </aside>
 
     <!-- Slide 3 -->
     <aside id="slide3" class="slideout">
-        <ul id="slide-out3" class="sidenav">
-            <li>
-                <div class="user-view">
-                    <div class="background">
-                        <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
-                    </div>
-                    <h3>Volován con Ensaladilla de Atún</h3>
-                </div>
-            </li>
-            <li>Elaboración: 10 min / Complejidad: baja</li>
-            <li>Temperatura: caliente / Porciones: 4</li>
-            <li>
-                <div class="divider"></div>
-            </li>
-            <li><a class="subheader">Ingredientes</a></li>
-            <li class="left-align">
-                <div>
-                    <p><strong style="color: dimgrey;">Para el relleno</strong></p>
-                    <p>2 pimientos rojos asados</p>
-                    <p>1 zanahoria mediana cocida</p>
-                    <p>4 cucharadas de guisantes</p>
-                    <p>170 g de atún escurrido</p>
-                    <p>1 cucharadita de perejil trinchado</p>
-                    <p>4 cucharadas de aceite de girasol</p>
-                    <p>2 cucharadas de vinagre</p>
-                    <p>1 cebolla</p>
-                    <p>Sal al gusto</p>
-                </div>
-            </li>
-            <li><a class="subheader">Steps</a></li>
-            <li class="left-align">
-                <div>
-                    <p>Cortar los pimientos, la zanahoria y la cebolla en jardineras pequeñas. Mezclar todos los
-                        ingredientes, dejar macerar unos minutos y rellenar los volovanes.</p>
-                </div>
-            </li>
-        </ul>
-        <button class="cerrar-slide">Cerrar</button>
+        <div class="slideout-header">
+            <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
+            <h3 class="slideout-title">Volován con Ensaladilla de Atún</h3>
+        </div>
+        
+        <div class="slideout-content">
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">Elaboración: 10 min</span>
+                <span class="badge bg-secondary me-2">Complejidad: baja</span>
+            </div>
+            <div class="mb-3">
+                <span class="badge bg-danger me-2">Temperatura: caliente</span>
+                <span class="badge bg-dark">Porciones: 4</span>
+            </div>
+            
+            <hr>
+            
+            <h4 class="subheader">Ingredientes</h4>
+            <p class="fw-bold text-muted">Para el relleno</p>
+            <ul class="list-unstyled">
+                <li>• 2 pimientos rojos asados</li>
+                <li>• 1 zanahoria mediana cocida</li>
+                <li>• 4 cucharadas de guisantes</li>
+                <li>• 170 g de atún escurrido</li>
+                <li>• 1 cucharadita de perejil trinchado</li>
+                <li>• 4 cucharadas de aceite de girasol</li>
+                <li>• 2 cucharadas de vinagre</li>
+                <li>• 1 cebolla</li>
+                <li>• Sal al gusto</li>
+            </ul>
+            
+            <h4 class="subheader mt-4">Preparación</h4>
+            <p>Cortar los pimientos, la zanahoria y la cebolla en jardineras pequeñas. Mezclar todos los ingredientes, dejar macerar unos minutos y rellenar los volovanes.</p>
+        </div>
+        
+        <button class="cerrar-slide btn btn-custom w-100">Cerrar</button>
     </aside>
 
     <!-- Slide 4 -->
     <aside id="slide4" class="slideout">
-        <ul id="slide-out4" class="sidenav">
-            <li>
-                <div class="user-view">
-                    <div class="background">
-                        <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
-                    </div>
-                    <h3>Tartar de Aguacate con camarones y naranja</h3>
-                </div>
-            </li>
-            <li>Elaboración: 5 min / Complejidad: media</li>
-            <li>Temperatura: fría / Porciones: 4</li>
-            <li>
-                <div class="divider"></div>
-            </li>
-            <li><a class="subheader">Ingredientes</a></li>
-            <li class="left-align">
-                <div>
-                    <p>1 aguacate maduro</p>
-                    <p>200 g de camarones cocidos</p>
-                    <p>1 ramita de hierba buena</p>
-                    <p>1 cucharada de perejil trinchado</p>
-                    <p>2 naranjas dulces</p>
-                    <p>1 cucharada de zumo de limón</p>
-                    <p>4 cucharadas de aceite de ajo</p>
-                    <p>Sal y pimienta</p>
-                </div>
-            </li>
-            <li><a class="subheader">Steps</a></li>
-            <li class="left-align">
-                <div>
-                    <p>Cortar el aguacate en dados pequeños, pelar y cortar las naranjas en supremas, unir suavemente
-                        con los camarones, las hojas de hierba buena, la sal y la pimienta. Por último agregar el
-                        aceite, el limón y espolvorear con el perejil.</p>
-                </div>
-            </li>
-        </ul>
-        <button class="cerrar-slide">Cerrar</button>
+        <div class="slideout-header">
+            <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
+            <h3 class="slideout-title">Tartar de Aguacate con camarones y naranja</h3>
+        </div>
+        
+        <div class="slideout-content">
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">Elaboración: 5 min</span>
+                <span class="badge bg-secondary me-2">Complejidad: media</span>
+            </div>
+            <div class="mb-3">
+                <span class="badge bg-info me-2 text-dark">Temperatura: fría</span>
+                <span class="badge bg-dark">Porciones: 4</span>
+            </div>
+            
+            <hr>
+            
+            <h4 class="subheader">Ingredientes</h4>
+            <ul class="list-unstyled">
+                <li>• 1 aguacate maduro</li>
+                <li>• 200 g de camarones cocidos</li>
+                <li>• 1 ramita de hierba buena</li>
+                <li>• 1 cucharada de perejil trinchado</li>
+                <li>• 2 naranjas dulces</li>
+                <li>• 1 cucharada de zumo de limón</li>
+                <li>• 4 cucharadas de aceite de ajo</li>
+                <li>• Sal y pimienta</li>
+            </ul>
+            
+            <h4 class="subheader mt-4">Preparación</h4>
+            <p>Cortar el aguacate en dados pequeños, pelar y cortar las naranjas en supremas, unir suavemente con los camarones, las hojas de hierba buena, la sal y la pimienta. Por último agregar el aceite, el limón y espolvorear con el perejil.</p>
+        </div>
+        
+        <button class="cerrar-slide btn btn-custom w-100">Cerrar</button>
     </aside>
 
     <!-- Slide 5 -->
     <aside id="slide5" class="slideout">
-        <ul id="slide-out5" class="sidenav">
-            <li>
-                <div class="user-view">
-                    <div class="background">
-                        <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
-                    </div>
-                    <h3>Cazuelita de Cobo al ajillo y sofrito de tomate</h3>
-                </div>
-            </li>
-            <li>Elaboración: 7 min / Complejidad: baja</li>
-            <li>Temperatura: caliente / Porciones: 4</li>
-            <li>
-                <div class="divider"></div>
-            </li>
-            <li><a class="subheader">Ingredientes</a></li>
-            <li class="left-align">
-                <div>
-                    <p>320 g cobo blando</p>
-                    <p>3 cucharadas de ajo laminado</p>
-                    <p>3 guindillas en vinagre</p>
-                    <p>¾ taza de aceite de oliva</p>
-                    <p>4 tomates grandes</p>
-                    <p>Sal y pimienta</p>
-                    <p>Acompañar con costrones de pan frito</p>
-                </div>
-            </li>
-            <li><a class="subheader">Steps</a></li>
-            <li class="left-align">
-                <div>
-                    <p>Poner el ajo y el aceite en una cazuela al fuego bajo. Dorar el ajo e incorporar el cobo. Agregar
-                        las guindillas y los tomates trinchados y puntear de sal y pimienta. Cocer por 4 minutos.
-                        Acompañar con los costrones de pan.</p>
-                </div>
-            </li>
-        </ul>
-        <button class="cerrar-slide">Cerrar</button>
+        <div class="slideout-header">
+            <img class="fondo" src="../Imagenes/fondo.jpeg" alt="fondo">
+            <h3 class="slideout-title">Cazuelita de Cobo al ajillo y sofrito de tomate</h3>
+        </div>
+        
+        <div class="slideout-content">
+            <div class="mb-3">
+                <span class="badge bg-secondary me-2">Elaboración: 7 min</span>
+                <span class="badge bg-secondary me-2">Complejidad: baja</span>
+            </div>
+            <div class="mb-3">
+                <span class="badge bg-danger me-2">Temperatura: caliente</span>
+                <span class="badge bg-dark">Porciones: 4</span>
+            </div>
+            
+            <hr>
+            
+            <h4 class="subheader">Ingredientes</h4>
+            <ul class="list-unstyled">
+                <li>• 320 g cobo blando</li>
+                <li>• 3 cucharadas de ajo laminado</li>
+                <li>• 3 guindillas en vinagre</li>
+                <li>• ¾ taza de aceite de oliva</li>
+                <li>• 4 tomates grandes</li>
+                <li>• Sal y pimienta</li>
+                <li>• Acompañar con costrones de pan frito</li>
+            </ul>
+            
+            <h4 class="subheader mt-4">Preparación</h4>
+            <p>Poner el ajo y el aceite en una cazuela al fuego bajo. Dorar el ajo e incorporar el cobo. Agregar las guindillas y los tomates trinchados y puntear de sal y pimienta. Cocer por 4 minutos. Acompañar con los costrones de pan.</p>
+        </div>
+        
+        <button class="cerrar-slide btn btn-custom w-100">Cerrar</button>
     </aside>
-
 
     <!-- Overlay -->
     <div class="slideout-overlay"></div>
 
-    <footer>
-        <span>By <span class="red">LMTRX</span></span>
+    <footer class="py-4 text-center mt-5">
+        <div class="footer-marquee overflow-hidden">
+            <p class="mb-0">
+                By <span class="red fw-bold">LMTRX</span>
+            </p>
+        </div>
     </footer>
-    <script src="../js/menu.js"></script>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript Personalizado -->
     <script src="../js/carrusel.js"></script>
 </body>
 

@@ -1,126 +1,36 @@
-main {
-    padding: 2rem 1rem;
-    display: flex;
-    justify-content: center;
-}
-
-.page-container {
-    max-width: 1100px;
-    background: var(--blanco);
-    padding: 2rem 3rem;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-/* TITULOS DE SECCIONES */
-h2 {
-    font-family: "Lexend Deca", cursive;
-    color: var(--rojo);
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-}
-
-h3 {
-    color: var(--negro);
-    font-size: 1.4rem;
-    margin-top: 1.5rem;
-    margin-bottom: .5rem;
-    border-bottom: 2px solid var(--rojo);
-    padding-bottom: 5px;
-}
-
-/* GRID PARA CAPÍTULOS */
-.chapter-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.8rem;
-    margin-bottom: 2rem;
-}
-
-.chapter-grid ol {
-    padding-left: 1.3rem;
-}
-
-.chapter-grid li {
-    margin-bottom: .6rem;
-    line-height: 1.5;
-    font-size: 1rem;
-}
-
-/* INDICE GENERAL */
 #indice-general {
-    margin-bottom: 2rem;
     text-align: center;
 }
 
 #indice-general ol {
     display: inline-block;
     text-align: left;
-    font-size: 1.05rem;
 }
 
 #indice-general li a {
     text-decoration: none;
-    color: var(--rojo);
+    color: var(--acento) !important;
     transition: color 0.2s;
 }
 
 #indice-general li a:hover {
-    color: var(--negro);
+    color: var(--texto) !important;
 }
+
+/* Botón subir */
 .btn-subir {
     position: fixed;
-    right: 20px;      /* borde derecho */
-    bottom: 45px;     /* altura desde abajo */
-    z-index: 1000;    /* siempre encima */
+    right: 20px;
+    bottom: 45px;
+    z-index: 1000;
 }
 
 .btn-subir img {
     width: 100px;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .page-container {
-        padding: 1.5rem 1.5rem;
-    }
-
-    header h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.7rem;
-    }
-
-    h3 {
-        font-size: 1.2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .page-container {
-        padding: 1rem;
-    }
-
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    h3 {
-        font-size: 1.1rem;
-    }
-    .btn-subir img {
-    width: 75px;
-    }
-    .btn-subir{
-        bottom: 50px;
-    }
+.btn-subir img:hover {
+    transform: scale(1.1);
 }
